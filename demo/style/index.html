@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Style Furniture — Փափուկ կահույք պատվերով և վերանորոգում</title>
+<meta name="description" content="Մահճակալներ, բազմոցներ, բազկաթոռներ պատվերով՝ ձեր չափով և գործվածքով։ Փափուկ կահույքի վերանորոգում և պաստառապատում։ Երևան։">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Style Furniture — Փափուկ կահույք պատվերով">
+<meta property="og:description" content="Մահճակալներ, բազմոցներ, բազկաթոռներ՝ ձեր չափով։ Նաև վերանորոգում և պաստառապատում։">
+<meta property="og:image" content="https://anhyan61-bot.github.io/nor-studio/demo/style/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://anhyan61-bot.github.io/nor-studio/demo/style/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0c0d; --bg2:#141416; --line:#282829;
+  --ink:#f4f1ec; --mut:#a09d98; --acc:#b08d64; --acc2:#dfc09a;
+  --serif:"Noto Serif Armenian",Georgia,serif;
+  --sans:"Noto Sans Armenian",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:.35s;padding:18px 0}
+.nav.s{background:rgba(12,12,13,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:11px 0}
+.nav .wrap{display:flex;align-items:center;gap:20px}
+.logo{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.14em}
+.logo i{font-style:normal;color:var(--acc);font-weight:400}
+.menu{margin-left:auto;display:flex;gap:30px;font-size:14px;letter-spacing:.04em;color:#dad6d0}
+.menu a{position:relative;padding:4px 0}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--acc);transition:.3s}
+.menu a:hover::after{right:0}
+.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;font-size:12px}
+.lang button{all:unset;cursor:pointer;padding:4px 11px;border-radius:999px;color:var(--mut);letter-spacing:.06em}
+.lang button.on{background:var(--acc);color:#140e06;font-weight:600}
+.burger{display:none;margin-left:auto;width:34px;height:24px;position:relative;cursor:pointer}
+.burger span{position:absolute;left:0;right:0;height:1.6px;background:var(--ink);transition:.3s}
+.burger span:nth-child(1){top:3px}.burger span:nth-child(2){top:11px}.burger span:nth-child(3){top:19px}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding-bottom:9vh;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/99043399.webp) center/cover no-repeat;transform:scale(1.06);animation:slow 18s ease-out forwards}
+@keyframes slow{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(12,12,13,.74) 0%,rgba(12,12,13,.32) 32%,rgba(12,12,13,.82) 62%,rgba(12,12,13,.95) 85%,var(--bg) 100%),
+  radial-gradient(130% 80% at 15% 100%,rgba(12,12,13,.9),transparent 65%)}
+.hero .wrap{position:relative;z-index:2}
+.kick{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.3em;color:var(--acc2);text-transform:uppercase;margin-bottom:22px;text-shadow:0 2px 14px rgba(0,0,0,.85),0 0 4px rgba(0,0,0,.6)}
+.kick::before{content:"";width:46px;height:1px;background:var(--acc)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6.4vw,76px);line-height:1.04;margin:0 0 26px;max-width:16ch;letter-spacing:-.01em;text-shadow:0 3px 24px rgba(0,0,0,.75)}
+.hero h1 b{font-weight:700;color:var(--acc2)}
+.hero p{max-width:50ch;color:#d1cdc7;font-size:clamp(15px,1.5vw,18px);line-height:1.75;margin:0 0 36px;text-shadow:0 2px 16px rgba(0,0,0,.8)}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:2px;font-size:14px;letter-spacing:.08em;font-weight:500;transition:.3s;border:1px solid transparent}
+.btn-a{background:var(--acc);color:#140e06}
+.btn-a:hover{background:var(--acc2)}
+.btn-b{border-color:#5c5a57;color:var(--ink)}
+.btn-b:hover{border-color:var(--acc);color:var(--acc2)}
+.scroll{position:absolute;right:4vw;bottom:9vh;z-index:2;writing-mode:vertical-rl;font-size:11px;letter-spacing:.26em;color:var(--mut);display:flex;align-items:center;gap:14px}
+.scroll::after{content:"";width:1px;height:58px;background:linear-gradient(var(--acc),transparent)}
+
+section{padding:clamp(66px,9vw,120px) 0;position:relative}
+.head{margin-bottom:54px}
+.head .num{font-family:var(--serif);font-size:13px;letter-spacing:.3em;color:var(--acc);margin-bottom:14px}
+.head h2{font-family:var(--serif);font-weight:400;font-size:clamp(27px,3.9vw,46px);line-height:1.18;margin:0;max-width:20ch}
+.head p{color:var(--mut);max-width:58ch;line-height:1.8;margin:18px 0 0;font-size:15px}
+
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(246px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc article{background:var(--bg2);padding:38px 30px;transition:.35s}
+.svc article:hover{background:#19191b}
+.svc i{display:block;font-style:normal;font-family:var(--serif);font-size:12px;letter-spacing:.24em;color:var(--acc);margin-bottom:20px}
+.svc h3{font-family:var(--serif);font-weight:600;font-size:21px;margin:0 0 12px;letter-spacing:.01em}
+.svc p{color:var(--mut);font-size:14px;line-height:1.75;margin:0}
+
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+.gal figure{margin:0;position:relative;overflow:hidden;background:#000}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1);filter:saturate(.95)}
+.gal figure:hover img{transform:scale(1.07)}
+.gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.55));opacity:0;transition:.4s}
+.gal figure:hover::after{opacity:1}
+.gal figcaption{position:absolute;left:20px;bottom:16px;z-index:2;font-size:13px;letter-spacing:.06em;color:#fff;opacity:0;transform:translateY(8px);transition:.4s}
+.gal figure:hover figcaption{opacity:1;transform:none}
+.g-a{grid-column:span 7;height:min(46vw,400px)}
+.g-b{grid-column:span 5;height:min(46vw,400px)}
+.g-c{grid-column:span 4;height:min(34vw,280px)}
+.g-d{grid-column:span 8;height:min(34vw,280px)}
+.g-e{grid-column:span 3;height:min(26vw,220px)}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:34px;counter-reset:s}
+.steps div{position:relative;padding-top:28px;border-top:1px solid var(--line)}
+.steps div::before{counter-increment:s;content:"0" counter(s);position:absolute;top:-11px;left:0;background:var(--bg);padding-right:12px;font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--acc)}
+.steps h4{font-family:var(--serif);font-weight:600;font-size:18px;margin:0 0 10px}
+.steps p{color:var(--mut);font-size:14px;line-height:1.75;margin:0}
+
+.strip{background:var(--bg2);border-block:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:34px;text-align:center}
+.strip b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,40px);color:var(--acc2);margin-bottom:8px}
+.strip span{font-size:13px;letter-spacing:.1em;color:var(--mut)}
+
+.contact{background:linear-gradient(180deg,var(--bg),#09090a)}
+.cbox{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,70px);align-items:center;border:1px solid var(--line);padding:clamp(28px,4.5vw,58px);background:var(--bg2)}
+.cbox h2{font-family:var(--serif);font-weight:400;font-size:clamp(25px,3.4vw,40px);margin:0 0 16px;line-height:1.2}
+.cbox p{color:var(--mut);line-height:1.8;margin:0 0 28px;font-size:15px}
+.cl{display:flex;flex-direction:column;gap:18px}
+.cl a,.cl div{display:flex;align-items:center;gap:14px;padding:16px 20px;border:1px solid var(--line);transition:.3s;font-size:15px}
+.cl a:hover{border-color:var(--acc);background:#19191b}
+.cl em{font-style:normal;font-size:11px;letter-spacing:.2em;color:var(--acc);min-width:70px}
+
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:13px;color:#706d69}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+
+.ru{display:none}
+.strip b.ru{display:none}
+body.ru .hy,body.ru .strip b.hy{display:none}
+body.ru .ru{display:block}
+body.ru span.ru,body.ru em.ru{display:inline}
+body.ru .strip b.ru{display:block}
+
+.rev{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.3,1)}
+.rev.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .menu{display:none}
+  .burger{display:block}
+  .nav.open .menu{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(12,12,13,.98);border-bottom:1px solid var(--line);padding:8px 4vw 18px}
+  .nav.open .menu a{padding:13px 0;border-bottom:1px solid var(--line)}
+  .g-a,.g-b,.g-c,.g-d,.g-e{grid-column:span 12;height:min(62vw,290px)}
+  .g-c,.g-e{grid-column:span 6;height:min(40vw,190px)}
+  .cbox{grid-template-columns:1fr}
+  .scroll{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#" class="logo">STYLE <i>FURNITURE</i></a>
+    <div class="menu" id="menu">
+      <a href="#svc"><span class="hy">Ծառայություններ</span><span class="ru">Услуги</span></a>
+      <a href="#work"><span class="hy">Գործեր</span><span class="ru">Работы</span></a>
+      <a href="#how"><span class="hy">Ինչպես ենք աշխատում</span><span class="ru">Как работаем</span></a>
+      <a href="#cnt"><span class="hy">Կապ</span><span class="ru">Контакты</span></a>
+    </div>
+    <div class="lang">
+      <button class="on" onclick="L(0,this)">ՀԱՅ</button>
+      <button onclick="L(1,this)">РУС</button>
+    </div>
+    <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="kick"><span class="hy">Փափուկ կահույք պատվերով և վերանորոգում · Երևան</span><span class="ru">Мягкая мебель на заказ и реставрация · Ереван</span></div>
+    <h1 class="hy">Կահույք՝<br><b>ձեր սենյակի չափով</b></h1>
+    <h1 class="ru">Мебель<br><b>по размеру вашей комнаты</b></h1>
+    <p class="hy">Մահճակալներ, բազմոցներ, բազկաթոռներ՝ Ձեր չափով, Ձեր գործվածքով և Ձեր գույնով։ Խանութում չգտնվողը պատրաստում ենք պատվերով։</p>
+    <p class="ru">Кровати, диваны, кресла — по вашим размерам, вашей ткани и вашему цвету. То, чего нет в магазине, делаем на заказ.</p>
+    <div class="cta">
+      <a class="btn btn-a" href="#work"><span class="hy">Տեսնել գործերը</span><span class="ru">Смотреть работы</span></a>
+      <a class="btn btn-b" href="#cnt"><span class="hy">Անվճար չափում</span><span class="ru">Бесплатный замер</span></a>
+    </div>
+  </div>
+  <div class="scroll"><span class="hy">ՈԼՈՐԵՔ</span><span class="ru">ВНИЗ</span></div>
+</header>
+
+<section id="svc">
+  <div class="wrap">
+    <div class="head rev">
+      <div class="num">01 — <span class="hy">ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</span><span class="ru">УСЛУГИ</span></div>
+      <h2 class="hy">Պատրաստում ենք և վերադարձնում կյանքի</h2>
+      <h2 class="ru">Делаем новое и возвращаем к жизни старое</h2>
+      <p class="hy">Նոր կահույք պատվերով և հին սիրելի բազմոցի վերանորոգում՝ նույն արտադրամասում։ Միևնույն վարպետները, միևնույն գործվածքները։</p>
+      <p class="ru">Новая мебель на заказ и реставрация любимого старого дивана — в одной мастерской. Те же мастера, те же ткани.</p>
+    </div>
+    <div class="svc rev">
+      <article><i>01</i><h3 class="hy">Մահճակալներ</h3><h3 class="ru">Кровати</h3>
+        <p class="hy">Փափուկ գլխամասով մահճակալներ՝ բարձրացվող մեխանիզմով և ներսում պահոցով։</p>
+        <p class="ru">Кровати с мягким изголовьем, подъёмным механизмом и коробом для белья.</p></article>
+      <article><i>02</i><h3 class="hy">Բազմոց և բազկաթոռ</h3><h3 class="ru">Диваны и кресла</h3>
+        <p class="hy">Անկյունային և ուղիղ բազմոցներ, բազկաթոռներ՝ ցանկացած չափով և ձևով։</p>
+        <p class="ru">Угловые и прямые диваны, кресла — любого размера и формы.</p></article>
+      <article><i>03</i><h3 class="hy">Վերանորոգում</h3><h3 class="ru">Реставрация</h3>
+        <p class="hy">Պաստառապատում, փրփուրի փոխարինում, ամրացում՝ հին կահույքը նորի տեսքով։</p>
+        <p class="ru">Перетяжка, замена поролона, укрепление — старая мебель как новая.</p></article>
+      <article><i>04</i><h3 class="hy">Ոչ ստանդարտ լուծումներ</h3><h3 class="ru">Нестандартные решения</h3>
+        <p class="hy">Նեղ անկյուն, ցածր առաստաղ, անսովոր չափ — պատրաստում ենք գծագրով։</p>
+        <p class="ru">Узкий угол, низкий потолок, необычный размер — делаем по чертежу.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rev">
+      <div class="num">02 — <span class="hy">ԳՈՐԾԵՐ</span><span class="ru">РАБОТЫ</span></div>
+      <h2 class="hy">Արդեն պատրաստված</h2>
+      <h2 class="ru">Уже сделано</h2>
+    </div>
+    <div class="gal rev">
+      <figure class="g-a"><img src="img/99043399.webp" alt=""><figcaption class="hy">Ննջասենյակ՝ լուսավորված գլխամասով</figcaption><figcaption class="ru">Спальня с подсветкой изголовья</figcaption></figure>
+      <figure class="g-b"><img src="img/99043405.webp" alt=""><figcaption class="hy">Բուկլե բազկաթոռներ</figcaption><figcaption class="ru">Кресла из букле</figcaption></figure>
+      <figure class="g-c"><img src="img/99043407.webp" alt=""><figcaption class="hy">Կլոր ձևի բազկաթոռ</figcaption><figcaption class="ru">Кресло округлой формы</figcaption></figure>
+      <figure class="g-d"><img src="img/99043400.webp" alt=""><figcaption class="hy">Երկար բազմոց՝ սրահի համար</figcaption><figcaption class="ru">Длинная банкетка для зала</figcaption></figure>
+      <figure class="g-e"><img src="img/99043403.webp" alt=""><figcaption class="hy">Թերթիկավոր գլխամաս</figcaption><figcaption class="ru">Изголовье «лепестками»</figcaption></figure>
+      <figure class="g-e"><img src="img/99043404.webp" alt=""><figcaption class="hy">Գլխամաս և դարակներ</figcaption><figcaption class="ru">Изголовье и полки</figcaption></figure>
+      <figure class="g-e"><img src="img/99043402.webp" alt=""><figcaption class="hy">Երկու առանձին մահճակալ</figcaption><figcaption class="ru">Две отдельные кровати</figcaption></figure>
+      <figure class="g-e"><img src="img/99043401.webp" alt=""><figcaption class="hy">Բարձրացվող մեխանիզմ, պահոց</figcaption><figcaption class="ru">Подъёмный механизм, короб</figcaption></figure>
+      <figure class="g-c"><img src="img/99043398.webp" alt=""><figcaption class="hy">Հարդարման սեղան</figcaption><figcaption class="ru">Туалетный столик</figcaption></figure>
+      <figure class="g-d"><img src="img/99043406.webp" alt=""><figcaption class="hy">Արտադրամասում՝ կմախքը</figcaption><figcaption class="ru">В мастерской: каркас</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="rev"><b class="hy">Ձեր չափով</b><b class="ru">По вашим размерам</b><span class="hy">ոչ թե պահեստային</span><span class="ru">а не складские</span></div>
+    <div class="rev"><b class="hy">Գործվածքը</b><b class="ru">Ткань</b><span class="hy">ընտրում եք Դուք</span><span class="ru">выбираете вы</span></div>
+    <div class="rev"><b class="hy">Անվճար</b><b class="ru">Бесплатно</b><span class="hy">չափում և հաշվարկ</span><span class="ru">замер и расчёт</span></div>
+    <div class="rev"><b class="hy">Առաքում</b><b class="ru">Доставка</b><span class="hy">և տեղադրում</span><span class="ru">и сборка</span></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head rev">
+      <div class="num">03 — <span class="hy">ԱՇԽԱՏԱՆՔԻ ԸՆԹԱՑՔԸ</span><span class="ru">КАК РАБОТАЕМ</span></div>
+      <h2 class="hy">Չորս քայլ՝ գաղափարից մինչև սենյակում</h2>
+      <h2 class="ru">Четыре шага — от идеи до комнаты</h2>
+    </div>
+    <div class="steps rev">
+      <div><h4 class="hy">Չափում և գաղափար</h4><h4 class="ru">Замер и идея</h4>
+        <p class="hy">Գալիս ենք, չափում տեղը և ցույց տալիս նմանատիպ գործեր։ Անվճար է։</p>
+        <p class="ru">Приезжаем, замеряем место и показываем похожие работы. Бесплатно.</p></div>
+      <div><h4 class="hy">Գործվածք և գին</h4><h4 class="ru">Ткань и цена</h4>
+        <p class="hy">Ընտրում եք գործվածքն ու գույնը, մենք ասում ենք վերջնական գինն ու ժամկետը։</p>
+        <p class="ru">Выбираете ткань и цвет, мы называем финальную цену и срок.</p></div>
+      <div><h4 class="hy">Արտադրություն</h4><h4 class="ru">Производство</h4>
+        <p class="hy">Կմախքը, փրփուրը և պաստառը՝ մեր արտադրամասում, մեր վարպետներով։</p>
+        <p class="ru">Каркас, поролон и обивка — в своей мастерской, своими мастерами.</p></div>
+      <div><h4 class="hy">Առաքում և տեղադրում</h4><h4 class="ru">Доставка и сборка</h4>
+        <p class="hy">Բերում, հավաքում ենք տեղում և տանում փաթեթավորումը։</p>
+        <p class="ru">Привозим, собираем на месте и забираем упаковку.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cnt" class="contact">
+  <div class="wrap">
+    <div class="cbox rev">
+      <div>
+        <h2 class="hy">Ուղարկեք սենյակի նկարը և չափը</h2>
+        <h2 class="ru">Пришлите фото комнаты и размер</h2>
+        <p class="hy">Մեկ ֆոտո և երկու չափ բավական է, որ ասենք գինը։ Եթե ինտերնետում դուր եկած կահույք եք տեսել, ուղարկեք նկարը — կկրկնենք Ձեր չափով։</p>
+        <p class="ru">Одного фото и двух размеров достаточно, чтобы назвать цену. Увидели мебель в интернете — пришлите фото, повторим по вашим размерам.</p>
+      </div>
+      <div class="cl">
+        <div><em>ՀԵՌ.</em><span class="hy">Ձեր հեռախոսահամարը</span><span class="ru">Ваш номер телефона</span></div>
+        <a href="https://www.list.am/ru/item/23893048" target="_blank" rel="noopener"><em>LIST</em><span>list.am — <span class="hy">հայտարարությունները</span><span class="ru">объявления</span></span></a>
+        <div><em class="hy">ՀԱՍՑԵ</em><em class="ru">АДРЕС</em><span class="hy">Երևան, արտադրամաս</span><span class="ru">Ереван, мастерская</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Style Furniture — <span class="hy">փափուկ կահույք պատվերով</span><span class="ru">мягкая мебель на заказ</span></span>
+    <a href="https://anhyan61-bot.github.io/nor-studio/" target="_blank" rel="noopener" style="color:#56524d;font-size:12px"><span class="hy">Դեմո կայք · Nor Studio</span><span class="ru">Демо-сайт · Nor Studio</span></a>
+  </div>
+</footer>
+
+<script>
+function L(i,b){document.body.classList.toggle('ru',i===1);document.querySelectorAll('.lang button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.documentElement.lang=i?'ru':'hy';}
+addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('s',scrollY>40)},{passive:true});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(e=>io.observe(e));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
