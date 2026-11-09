@@ -138,6 +138,11 @@ a{color:inherit}
 .tier .tprice{font-family:var(--display);font-size:clamp(21px,5.6vw,26px);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
 .anchor{margin-top:13px;font-size:13px;color:var(--muted)}
 .anchor s{white-space:nowrap}
+.webshot{margin:0 0 26px}
+.webshot img{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--line);border-radius:3px;background:var(--card)}
+.webshot.narrow img{max-width:290px}
+.webshot figcaption{margin-top:11px;font-size:14.5px;line-height:1.55;color:var(--muted);max-width:40em}
+.webshot figcaption b{color:var(--ink);font-weight:600}
 ul.ticks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:9px}
 ul.ticks li{padding-left:22px;position:relative;font-size:15.3px}
 ul.ticks li::before{
@@ -233,10 +238,10 @@ section{padding-block:38px}
 
   <header class="hero">
     <div class="eyebrow"><span class="hy">Երևան · առցանց · 24 ժամում</span><span class="ru">Ереван · онлайн · за 24 часа</span></div>
-    <h1><span class="hy">Դիզայն, որից հետո գին են հարցնում</span><span class="ru">Дизайн, после которого спрашивают цену</span></h1>
+    <h1><span class="hy">Կայք, որից հետո զանգում են</span><span class="ru">Сайт, после которого звонят</span></h1>
     <p class="sub">
-      <span class="hy">Գնացուցակ, մենյու, այցեքարտ, ամանորյա ձևավորում և կայք՝ ձեր գներով ու գույներով։ Նախ տեսնում եք, հետո վճարում։</span>
-      <span class="ru">Прайс, меню, визитка, новогоднее оформление и сайт — с вашими ценами и в ваших цветах. Сначала смотрите, потом платите.</span>
+      <span class="hy">Պատրաստում ենք կայքեր փոքր բիզնեսի համար՝ ձեր աշխատանքների պատկերասրահով, ձեր գներով, հայերեն և ռուսերեն։ Նախ տեսնում եք պատրաստը, հետո վճարում։</span>
+      <span class="ru">Делаем сайты для малого бизнеса — с галереей ваших работ, вашими ценами, на армянском и русском. Сначала смотрите готовое, потом платите.</span>
     </p>
     <div class="rule"></div>
   </header>
@@ -265,8 +270,8 @@ section{padding-block:38px}
         <li><span class="hy">Հանձնում ենք նույն օրը՝ աշխատող հասցեով</span><span class="ru">Сдаём в тот же день, по рабочему адресу</span></li>
       </ul>
       <p class="fineprint">
-        <span class="hy">Գինը կայքի համար է։ Դոմենը (.am՝ տարեկան ~15 000 ֏) վերցնում եք ձեր անունով — կամ առայժմ աշխատում ենք անվճար հասցեի վրա։</span>
-        <span class="ru">Цена — за сайт. Домен (.am, ~15 000 ֏ в год) оформляете на себя — или пока работаем на бесплатном адресе.</span>
+        <span class="hy"><b>Հոսթինգը անվճար է</b> — դնում ենք այնպիսի հարթակի վրա, որտեղ ամսավճար չկա։ Դոմենը (.am՝ տարեկան ~15 000 ֏) վերցնում եք ձեր անունով, որ ձերը լինի — կամ առայժմ աշխատում ենք անվճար հասցեի վրա։</span>
+        <span class="ru"><b>Хостинг бесплатный</b> — размещаем на платформе без ежемесячной платы. Домен (.am, ~15 000 ֏ в год) оформляете на себя, чтобы он был ваш — или пока работаем на бесплатном адресе.</span>
       </p>
       <a class="btn" href="https://t.me/norstudio_am"><span class="hy">Գրել և սկսել այսօր</span><span class="ru">Написать и начать сегодня</span></a>
     </article>
@@ -295,7 +300,28 @@ section{padding-block:38px}
 
   <section>
     <div class="sechead">
-      <h2><span class="hy">Մնացած գները</span><span class="ru">Остальные цены</span></h2>
+      <h2><span class="hy">Կայքեր, որ սարքել ենք</span><span class="ru">Сайты, которые мы сделали</span></h2>
+      <span class="line"></span>
+    </div>
+    <figure class="webshot">
+      <img src="img/web-promot.jpg" alt="Promot Armenia — աշխատանքների էջ" loading="lazy" width="1100" height="764">
+      <figcaption>
+        <span class="hy"><b>promotarmenia.am</b> — արտաքին գովազդի և ցուցահանդեսային տաղավարների ընկերություն։ 64 նախագիծ՝ բաժիններով ու զտիչներով, 3 լեզու, ADMIN պանել, որտեղից իրենք ավելացնում են նոր գործեր։ Հաճախորդների մեջ՝ ACBA Bank, Ameriabank, Յունիբանկ, VLV Centre × Hisense։</span>
+        <span class="ru"><b>promotarmenia.am</b> — компания наружной рекламы и выставочных стендов. 64 проекта с разделами и фильтрами, 3 языка, админ-панель для добавления новых работ. Среди клиентов: ACBA Bank, Ameriabank, Юнибанк, VLV Centre × Hisense.</span>
+      </figcaption>
+    </figure>
+    <figure class="webshot narrow">
+      <img src="img/web-app.jpg" alt="Հեռախոսի հավելված" loading="lazy" width="430" height="900">
+      <figcaption>
+        <span class="hy"><b>Հեռախոսի հավելված</b> նույն ընկերության համար՝ հայտի ուղարկում, պատվերի կարգավիճակ, ծառայությունների ձևաթղթեր։</span>
+        <span class="ru"><b>Мобильное приложение</b> для той же компании: отправка заявки, статус заказа, формы по услугам.</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2><span class="hy">Նաև անում ենք</span><span class="ru">Делаем также</span></h2>
       <span class="line"></span>
     </div>
     <div class="rows">
