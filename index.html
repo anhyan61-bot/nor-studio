@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Nor Studio — գնացուցակ, մենյու, այցեքարտ, ամանորյա ձևավորում և կայք 24 ժամում. Երևան, առցանց.">
+<meta property="og:title" content="Nor Studio — դիզայն 24 ժամում">
+<meta property="og:description" content="Կայք 1 օրում՝ 50 000 ֏. Ամանորյա փաթեթ՝ 15 000 ֏. Նախ տեսնում եք, հետո վճարում։">
+<meta property="og:type" content="website">
+<style>
+html{color-scheme:light}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style><title>Nor Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;500;600;700&family=Noto+Sans+Armenian:wght@400;500;600&display=swap">
+
+<style>
+/* Layout: one narrow editorial column on warm paper; two offer cards carry the page, work shown as a masonry wall below. */
+:root{
+  --paper:#F3EDE3;
+  --card:#FBF7F0;
+  --ink:#241B14;
+  --muted:#6F6055;
+  --gold:#A8763A;
+  --gold-soft:#E8D9BF;
+  --line:rgba(36,27,20,.14);
+  --shadow:0 1px 2px rgba(36,27,20,.05),0 8px 24px rgba(36,27,20,.07);
+  --display:"Noto Serif Armenian",Georgia,"Times New Roman",serif;
+  --body:"Noto Sans Armenian",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --maxw:720px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15110D;
+    --card:#1E1811;
+    --ink:#F2EADE;
+    --muted:#A79684;
+    --gold:#D7A964;
+    --gold-soft:#4A3A23;
+    --line:rgba(242,234,222,.16);
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.45);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15110D;
+  --card:#1E1811;
+  --ink:#F2EADE;
+  --muted:#A79684;
+  --gold:#D7A964;
+  --gold-soft:#4A3A23;
+  --line:rgba(242,234,222,.16);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0 0 auto;
+  height:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);
+}
+.wrap{
+  max-width:var(--maxw);margin:0 auto;
+  padding-left:max(18px,env(safe-area-inset-left,0px));
+  padding-right:max(18px,env(safe-area-inset-right,0px));
+}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;line-height:1.2}
+p{margin:0}
+a{color:inherit}
+
+/* ---- top bar ---- */
+.bar{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:19;
+  background:var(--paper);border-bottom:1px solid var(--line);
+}
+.bar .wrap{display:flex;align-items:center;gap:12px;padding-block:11px}
+.mark{
+  font-family:var(--display);font-weight:700;letter-spacing:.17em;
+  font-size:14px;text-transform:uppercase;margin-right:auto;white-space:nowrap;
+}
+.mark b{color:var(--gold);font-weight:700}
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.langs button{
+  font:inherit;font-size:12px;font-weight:600;letter-spacing:.06em;
+  padding:5px 11px;border:0;background:transparent;color:var(--muted);cursor:pointer;
+}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.langs button:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* ---- hero ---- */
+.hero{padding-block:46px 34px;text-align:center}
+.hero .eyebrow{
+  font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+.hero h1{font-size:clamp(32px,8.5vw,52px);letter-spacing:-.01em}
+.hero .sub{margin-top:16px;color:var(--muted);font-size:clamp(15px,3.7vw,17.5px);max-width:30em;margin-inline:auto}
+.rule{width:46px;height:1px;background:var(--gold);margin:24px auto 0;opacity:.6}
+
+/* ---- offers ---- */
+.offers{display:grid;gap:18px;padding-block:8px 40px}
+.offer{
+  background:var(--card);border:1px solid var(--line);border-radius:4px;
+  padding:26px 22px;box-shadow:var(--shadow);position:relative;
+}
+.offer.lead{border-color:var(--gold);border-width:1.5px}
+.tag{
+  display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);background:var(--gold-soft);padding:4px 10px;border-radius:999px;margin-bottom:14px;
+}
+.offer h2{font-size:clamp(23px,5.6vw,29px)}
+.price{
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:14px;
+  font-variant-numeric:tabular-nums;
+}
+.price .now{font-family:var(--display);font-size:clamp(34px,9vw,46px);font-weight:700;line-height:1}
+.price .was{color:var(--muted);font-size:14px}
+.price .was s{text-decoration-thickness:1px}
+ul.ticks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:9px}
+ul.ticks li{padding-left:22px;position:relative;font-size:15.3px}
+ul.ticks li::before{
+  content:"";position:absolute;left:3px;top:.62em;width:7px;height:7px;
+  border-left:1.6px solid var(--gold);border-bottom:1.6px solid var(--gold);
+  transform:rotate(-45deg);
+}
+.fineprint{margin-top:16px;font-size:13.2px;color:var(--muted);line-height:1.5}
+.btn{
+  display:inline-block;margin-top:20px;background:var(--ink);color:var(--paper);
+  font-family:var(--body);font-size:15px;font-weight:600;text-decoration:none;
+  padding:13px 24px;border-radius:3px;transition:opacity .15s;
+}
+.btn:hover{opacity:.86}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+
+/* ---- section ---- */
+section{padding-block:38px}
+.sechead{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.sechead h2{font-size:clamp(21px,5vw,27px);white-space:nowrap}
+.sechead .line{flex:1;height:1px;background:var(--line);min-width:0}
+
+/* ---- price table ---- */
+.rows{display:grid;gap:0}
+.row{
+  display:flex;align-items:baseline;gap:10px;
+  padding-block:11px;border-bottom:1px solid var(--line);
+}
+.row:last-child{border-bottom:0}
+.row .what{min-width:0;font-size:15.3px}
+.row .dots{flex:1;border-bottom:1px dotted var(--line);min-width:14px;transform:translateY(-4px)}
+.row .amt{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap;font-size:15.3px}
+
+/* ---- steps ---- */
+.steps{display:grid;gap:20px;counter-reset:s}
+.step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.step .n{
+  font-family:var(--display);font-size:15px;font-weight:700;color:var(--gold);
+  width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;font-variant-numeric:tabular-nums;
+}
+.step h3{font-size:17px;margin-bottom:3px}
+.step p{color:var(--muted);font-size:14.6px;line-height:1.55}
+
+/* ---- gallery ---- */
+.wall{columns:2;column-gap:12px}
+@media (min-width:620px){.wall{columns:3;column-gap:14px}}
+.piece{break-inside:avoid;margin-bottom:12px;position:relative}
+.piece img{
+  display:block;width:100%;max-width:100%;height:auto;border-radius:3px;
+  border:1px solid var(--line);background:var(--card);
+}
+.piece figcaption{
+  margin-top:6px;font-size:11.5px;color:var(--muted);letter-spacing:.02em;
+}
+
+/* ---- trust / contact ---- */
+.note{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:3px;padding:18px 20px;font-size:15px;line-height:1.6;
+}
+.contact{text-align:center;padding-block:44px 54px;border-top:1px solid var(--line);margin-top:10px}
+.contact h2{font-size:clamp(22px,5.4vw,28px)}
+.contact p{color:var(--muted);margin-top:12px;font-size:15px}
+.handle{
+  display:inline-block;margin-top:20px;font-family:var(--display);font-size:clamp(19px,5vw,24px);
+  font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:.01em;
+  border-bottom:1px solid var(--gold-soft);padding-bottom:3px;
+}
+.foot{text-align:center;font-size:12px;color:var(--muted);padding-bottom:30px;letter-spacing:.04em}
+
+.ru{display:none}
+:root[data-lang="ru"] .hy{display:none}
+:root[data-lang="ru"] .ru{display:revert}
+:root[data-lang="ru"] li.hy,:root[data-lang="ru"] p.hy{display:none}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<div class="bar">
+  <div class="wrap">
+    <span class="mark">Nor&nbsp;<b>Studio</b></span>
+    <div class="langs" role="group" aria-label="Language">
+      <button id="lang-hy" type="button" aria-pressed="true">ՀԱՅ</button>
+      <button id="lang-ru" type="button" aria-pressed="false">РУС</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow"><span class="hy">Երևան · առցանց · 24 ժամում</span><span class="ru">Ереван · онлайн · за 24 часа</span></div>
+    <h1><span class="hy">Դիզայն, որից հետո գին են հարցնում</span><span class="ru">Дизайн, после которого спрашивают цену</span></h1>
+    <p class="sub">
+      <span class="hy">Գնացուցակ, մենյու, այցեքարտ, ամանորյա ձևավորում և կայք՝ ձեր գներով ու գույներով։ Նախ տեսնում եք, հետո վճարում։</span>
+      <span class="ru">Прайс, меню, визитка, новогоднее оформление и сайт — с вашими ценами и в ваших цветах. Сначала смотрите, потом платите.</span>
+    </p>
+    <div class="rule"></div>
+  </header>
+
+  <div class="offers">
+
+    <article class="offer lead">
+      <span class="tag"><span class="hy">Նոյեմբերյան գին</span><span class="ru">Ноябрьская цена</span></span>
+      <h2><span class="hy">Կայք՝ 1 օրում</span><span class="ru">Сайт за 1 день</span></h2>
+      <div class="price">
+        <span class="now">50 000 ֏</span>
+        <span class="was"><span class="hy">սովորական գինը Հայաստանում՝ <s>150 000–400 000 ֏</s></span><span class="ru">обычная цена в Армении: <s>150 000–400 000 ֏</s></span></span>
+      </div>
+      <ul class="ticks">
+        <li><span class="hy">Մեկ էջանոց կայք՝ հեռախոսի և համակարգչի համար</span><span class="ru">Одностраничный сайт — для телефона и компьютера</span></li>
+        <li><span class="hy">Ձեր լուսանկարները, ծառայությունները, գները</span><span class="ru">Ваши фото, услуги и цены</span></li>
+        <li><span class="hy">Կոճակներ՝ զանգ, Instagram, Telegram, WhatsApp, քարտեզ</span><span class="ru">Кнопки: звонок, Instagram, Telegram, WhatsApp, карта</span></li>
+        <li><span class="hy">Երկու լեզվով՝ հայերեն և ռուսերեն</span><span class="ru">На двух языках: армянский и русский</span></li>
+        <li><span class="hy">Հանձնում ենք նույն օրը՝ աշխատող հասցեով</span><span class="ru">Сдаём в тот же день, по рабочему адресу</span></li>
+      </ul>
+      <p class="fineprint">
+        <span class="hy">Գինը կայքի համար է։ Դոմենը (.am՝ տարեկան ~15 000 ֏) վերցնում եք ձեր անունով — կամ առայժմ աշխատում ենք անվճար հասցեի վրա։</span>
+        <span class="ru">Цена — за сайт. Домен (.am, ~15 000 ֏ в год) оформляете на себя — или пока работаем на бесплатном адресе.</span>
+      </p>
+      <a class="btn" href="https://t.me/norstudio_am"><span class="hy">Գրել և սկսել այսօր</span><span class="ru">Написать и начать сегодня</span></a>
+    </article>
+
+    <article class="offer">
+      <span class="tag"><span class="hy">Նոյեմբեր–դեկտեմբեր</span><span class="ru">Ноябрь–декабрь</span></span>
+      <h2><span class="hy">Ամանորյա փաթեթ</span><span class="ru">Новогодний пакет</span></h2>
+      <div class="price">
+        <span class="now">15 000 ֏</span>
+        <span class="was"><span class="hy">առանձին՝ 23 000 ֏</span><span class="ru">по отдельности: 23 000 ֏</span></span>
+      </div>
+      <ul class="ticks">
+        <li><span class="hy">Ամանորյա մենյու կամ գնացուցակ</span><span class="ru">Новогоднее меню или прайс</span></li>
+        <li><span class="hy">Նվեր-սերտիֆիկատ՝ տպելու պատրաստ</span><span class="ru">Подарочный сертификат, готовый к печати</span></li>
+        <li><span class="hy">3 Instagram փոստ՝ ամանորյա առաջարկով</span><span class="ru">3 поста в Instagram с новогодним предложением</span></li>
+        <li><span class="hy">24 ժամում, ձեր գույներով ու լոգոյով</span><span class="ru">За 24 часа, в ваших цветах и с логотипом</span></li>
+      </ul>
+      <p class="fineprint">
+        <span class="hy">Ստանում եք PDF՝ տպարանի համար, և PNG՝ հեռախոսի ու սոցցանցի համար։</span>
+        <span class="ru">Получаете PDF для типографии и PNG для телефона и соцсетей.</span>
+      </p>
+      <a class="btn ghost" href="https://t.me/norstudio_am"><span class="hy">Պատվիրել</span><span class="ru">Заказать</span></a>
+    </article>
+
+  </div>
+
+  <section>
+    <div class="sechead">
+      <h2><span class="hy">Մնացած գները</span><span class="ru">Остальные цены</span></h2>
+      <span class="line"></span>
+    </div>
+    <div class="rows">
+      <div class="row"><span class="what"><span class="hy">Գնացուցակ կամ մենյու՝ 1 էջ</span><span class="ru">Прайс или меню, 1 страница</span></span><span class="dots"></span><span class="amt">5 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Գնացուցակ կամ մենյու՝ 2+ էջ</span><span class="ru">Прайс или меню, 2+ страницы</span></span><span class="dots"></span><span class="amt">8 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Այցեքարտ՝ երկու կողմ</span><span class="ru">Визитка, две стороны</span></span><span class="dots"></span><span class="amt">5 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Հրավիրատոմս</span><span class="ru">Приглашение</span></span><span class="dots"></span><span class="amt">5 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Նվեր-սերտիֆիկատ</span><span class="ru">Подарочный сертификат</span></span><span class="dots"></span><span class="amt">5 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Instagram փոստ</span><span class="ru">Пост для Instagram</span></span><span class="dots"></span><span class="amt">3 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">10 փոստ՝ ամսվա պլանով</span><span class="ru">10 постов с планом на месяц</span></span><span class="dots"></span><span class="amt">25 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Ներկայացում՝ մինչև 10 սլայդ</span><span class="ru">Презентация до 10 слайдов</span></span><span class="dots"></span><span class="amt">7 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Ներկայացում՝ 10–20 սլայդ</span><span class="ru">Презентация 10–20 слайдов</span></span><span class="dots"></span><span class="amt">12 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Ապրանքի քարտ Wildberries / Ozon՝ 5 սլայդ</span><span class="ru">Карточка товара Wildberries / Ozon, 5 слайдов</span></span><span class="dots"></span><span class="amt">12 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Ռեզյումե (CV)</span><span class="ru">Резюме (CV)</span></span><span class="dots"></span><span class="amt">4 000 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Թարգմանություն՝ 1 էջ (հայ/ռուս/անգլ)</span><span class="ru">Перевод, 1 страница (арм/рус/англ)</span></span><span class="dots"></span><span class="amt">2 500 ֏</span></div>
+      <div class="row"><span class="what"><span class="hy">Լոգո՝ 3 տարբերակ, ֆայլերը բոլոր չափսերով</span><span class="ru">Логотип: 3 варианта, файлы всех размеров</span></span><span class="dots"></span><span class="amt">15 000 ֏</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2><span class="hy">Ինչպես է լինում</span><span class="ru">Как это работает</span></h2>
+      <span class="line"></span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <div>
+          <h3><span class="hy">Գրում եք, թե ինչ է պետք</span><span class="ru">Пишете, что нужно</span></h3>
+          <p><span class="hy">Telegram-ով կամ list.am-ի նամակով։ Ուղարկում եք գները, լուսանկարները, լոգոն՝ ինչ ունեք։ Չունեք լոգո — կաշխատենք առանց դրա։</span><span class="ru">В Telegram или сообщением на list.am. Присылаете цены, фото, логотип — что есть. Логотипа нет — сделаем и без него.</span></p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <div>
+          <h3><span class="hy">2–3 ժամում ուղարկում ենք տարբերակը</span><span class="ru">Через 2–3 часа присылаем вариант</span></h3>
+          <p><span class="hy">Ջրանիշով։ Նայում եք, ասում՝ ինչ փոխել։ Ուղղումներն անվճար են։</span><span class="ru">С водяным знаком. Смотрите, говорите, что поменять. Правки бесплатные.</span></p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <div>
+          <h3><span class="hy">Հավանում եք, վճարում եք, ստանում եք ֆայլերը</span><span class="ru">Нравится — платите и получаете файлы</span></h3>
+          <p><span class="hy">Idram կամ քարտ։ Ֆայլերը՝ PDF տպարանի համար և PNG հեռախոսի համար, առանց ջրանիշի։</span><span class="ru">Idram или карта. Файлы: PDF для типографии и PNG для телефона, без водяного знака.</span></p>
+        </div>
+      </div>
+    </div>
+    <p class="note" style="margin-top:26px">
+      <span class="hy"><b>Կանխավճար չկա։</b> Վճարում եք միայն այն բանից հետո, երբ տեսել և հավանել եք։ Ամբողջ աշխատանքը գրավոր է ու առցանց — անունները, գները և ուղղագրությունը այդպես ճիշտ են մնում։</span>
+      <span class="ru"><b>Предоплаты нет.</b> Платите только после того, как увидели и одобрили. Вся работа письменно и онлайн — так имена, цены и орфография остаются верными.</span>
+    </p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2><span class="hy">Աշխատանքներ</span><span class="ru">Работы</span></h2>
+      <span class="line"></span>
+    </div>
+    <div class="wall">
+      <figure class="piece"><img src="img/prices.jpg" alt="Գնացուցակների վեց ոճ" loading="lazy" width="1080" height="1350"><figcaption><span class="hy">Գնացուցակներ՝ 6 ոճ</span><span class="ru">Прайс-листы: 6 стилей</span></figcaption></figure>
+      <figure class="piece"><img src="img/menu.jpg" alt="Սրճարանի մենյու" loading="lazy" width="1080" height="1350"><figcaption><span class="hy">Սրճարանի մենյու</span><span class="ru">Меню кафе</span></figcaption></figure>
+      <figure class="piece"><img src="img/card.jpg" alt="Այցեքարտ" loading="lazy" width="1080" height="1080"><figcaption><span class="hy">Այցեքարտ</span><span class="ru">Визитка</span></figcaption></figure>
+      <figure class="piece"><img src="img/invite.jpg" alt="Հրավիրատոմս" loading="lazy" width="1080" height="1920"><figcaption><span class="hy">Հրավիրատոմս</span><span class="ru">Приглашение</span></figcaption></figure>
+      <figure class="piece"><img src="img/sale.jpg" alt="Ակցիայի բաններ" loading="lazy" width="1080" height="1920"><figcaption><span class="hy">Ակցիայի բաններ</span><span class="ru">Баннер акции</span></figcaption></figure>
+      <figure class="piece"><img src="img/serum.jpg" alt="Ապրանքի ինֆոգրաֆիկա՝ շիճուկ" loading="lazy" width="900" height="1200"><figcaption><span class="hy">Ապրանքի քարտ</span><span class="ru">Карточка товара</span></figcaption></figure>
+      <figure class="piece"><img src="img/candle.jpg" alt="Ապրանքի ինֆոգրաֆիկա՝ մոմ" loading="lazy" width="900" height="1200"><figcaption><span class="hy">Ապրանքի քարտ</span><span class="ru">Карточка товара</span></figcaption></figure>
+      <figure class="piece"><img src="img/highlights.jpg" alt="Instagram-ի շապիկներ" loading="lazy" width="1080" height="1080"><figcaption><span class="hy">Instagram շապիկներ</span><span class="ru">Обложки Instagram</span></figcaption></figure>
+      <figure class="piece"><img src="img/earbuds.jpg" alt="Ապրանքի ինֆոգրաֆիկա՝ ականջակալներ" loading="lazy" width="900" height="1200"><figcaption><span class="hy">Ապրանքի քարտ</span><span class="ru">Карточка товара</span></figcaption></figure>
+      <figure class="piece"><img src="img/bag.jpg" alt="Ապրանքի ինֆոգրաֆիկա՝ պայուսակ" loading="lazy" width="900" height="1200"><figcaption><span class="hy">Ապրանքի քարտ</span><span class="ru">Карточка товара</span></figcaption></figure>
+      <figure class="piece"><img src="img/beforeafter.jpg" alt="Առաջ և հետո" loading="lazy" width="1080" height="1350"><figcaption><span class="hy">Առաջ / հետո</span><span class="ru">До / после</span></figcaption></figure>
+      <figure class="piece"><img src="img/smm.jpg" alt="Սոցցանցի փոստեր" loading="lazy" width="1200" height="600"><figcaption><span class="hy">Սոցցանցի փոստեր</span><span class="ru">Посты для соцсетей</span></figcaption></figure>
+      <figure class="piece"><img src="img/beauty.jpg" alt="Գեղեցկության սրահների գնացուցակներ" loading="lazy" width="1200" height="356"><figcaption><span class="hy">Սրահների գնացուցակ</span><span class="ru">Прайс для салонов</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2><span class="hy">Գրեք այսօր</span><span class="ru">Напишите сегодня</span></h2>
+    <p>
+      <span class="hy">Պատասխանում ենք 10–15 րոպեում, ամեն օր՝ 10:00–22:00։<br>Զանգ չենք անում — ամբողջը գրավոր է։</span>
+      <span class="ru">Отвечаем за 10–15 минут, каждый день с 10:00 до 22:00.<br>Не звоним — всё письменно.</span>
+    </p>
+    <a class="handle" href="https://t.me/norstudio_am">t.me/norstudio_am</a>
+    <p style="margin-top:14px;font-size:13.5px">
+      <span class="hy">կամ՝ list.am-ի նամակով, «Nor Studio» հայտարարության տակից</span>
+      <span class="ru">или сообщением на list.am, под объявлением «Nor Studio»</span>
+    </p>
+  </section>
+
+  <p class="foot">NOR STUDIO · ԵՐԵՎԱՆ</p>
+
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var hy=document.getElementById('lang-hy');
+  var ru=document.getElementById('lang-ru');
+  function set(lang){
+    if(lang==='ru'){root.setAttribute('data-lang','ru');}
+    else{root.removeAttribute('data-lang');}
+    hy.setAttribute('aria-pressed',String(lang!=='ru'));
+    ru.setAttribute('aria-pressed',String(lang==='ru'));
+    try{localStorage.setItem('ns-lang',lang);}catch(e){}
+  }
+  hy.addEventListener('click',function(){set('hy');});
+  ru.addEventListener('click',function(){set('ru');});
+  var saved=null;
+  try{saved=localStorage.getItem('ns-lang');}catch(e){}
+  if(saved==='ru'){set('ru');}
+})();
+</script>
+
+</body>
+</html>
