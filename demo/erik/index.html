@@ -121,9 +121,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;font-size:13px;color:#6f6
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
 
 .ru{display:none}
-body.ru .hy{display:none}
+.strip b.ru{display:none}
+body.ru .hy,body.ru .strip b.hy{display:none}
 body.ru .ru{display:block}
-body.ru span.ru,body.ru em.ru,body.ru b.ru{display:inline}
+body.ru span.ru,body.ru em.ru{display:inline}
+body.ru .strip b.ru{display:block}
 
 .rev{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.3,1)}
 .rev.in{opacity:1;transform:none}
@@ -277,7 +279,7 @@ body.ru span.ru,body.ru em.ru,body.ru b.ru{display:inline}
 <footer>
   <div class="wrap">
     <span>© 2026 ԷՐԻԿ — <span class="hy">լոֆթ և դարբնագործ մետաղ</span><span class="ru">лофт и ковка</span></span>
-    <span style="color:#4d4a47;font-size:12px"><span class="hy">Դեմո կայք · Nor Studio</span><span class="ru">Демо-сайт · Nor Studio</span></span>
+    <a href="https://anhyan61-bot.github.io/nor-studio/" target="_blank" rel="noopener" style="color:#4d4a47;font-size:12px"><span class="hy">Դեմո կայք · Nor Studio</span><span class="ru">Демо-сайт · Nor Studio</span></a>
   </div>
 </footer>
 
