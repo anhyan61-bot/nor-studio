@@ -17,134 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#ffffff; --bg2:#f1f4f6; --bg3:#e6ebef; --line:#d7dee3;
-  --ink:#10171d; --ink2:#4a5660; --mut:#7d8a94;
-  --acc:#17628c; --acc2:#0f4a6b; --ok:#1f8a5a;
-  --sans:"Noto Sans Armenian",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;color-scheme:light}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:16px}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1240px,92vw);margin:0 auto}
-.lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);font-weight:600}
-
-/* topbar */
-.top{background:var(--acc2);color:#cfe3ef;font-size:13px}
-.top .wrap{display:flex;gap:22px;align-items:center;padding:9px 0;flex-wrap:wrap}
-.top b{color:#fff;font-weight:500}
-.top .sp{margin-left:auto;display:flex;gap:16px}
-.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;gap:20px;padding:14px 0}
-.logo{display:flex;flex-direction:column;line-height:1.05}
-.logo b{font-size:19px;font-weight:700;letter-spacing:.04em}
-.logo span{font-size:10px;letter-spacing:.22em;color:var(--mut);text-transform:uppercase;margin-top:3px}
-.menu{margin-left:auto;display:flex;gap:26px;font-size:14.5px;color:var(--ink2)}
-.menu a:hover{color:var(--acc)}
-.lang{display:flex;gap:9px;font-size:12px;font-weight:600}
-.lang button{all:unset;cursor:pointer;color:var(--mut);padding:3px 7px;border-radius:3px}
-.lang button.on{background:var(--acc);color:#fff}
-.burger{display:none;margin-left:auto;width:28px;height:19px;position:relative;cursor:pointer}
-.burger span{position:absolute;left:0;right:0;height:2px;background:var(--ink);border-radius:2px}
-.burger span:nth-child(1){top:0}.burger span:nth-child(2){top:8.5px}.burger span:nth-child(3){top:17px}
-
-/* hero: photo band + overlapping white card */
-.hero{position:relative;background:var(--bg2)}
-.hero .ph{height:min(70vw,540px);overflow:hidden}
-.hero .ph img{width:100%;height:100%;object-fit:cover}
-.hero .wrap{position:relative}
-.card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--acc);padding:clamp(24px,3.4vw,44px);max-width:620px;margin-top:clamp(-150px,-14vw,-90px);position:relative;z-index:2;box-shadow:0 18px 50px rgba(16,23,29,.12)}
-.card h1{font-size:clamp(25px,3.6vw,42px);line-height:1.16;margin:14px 0 14px;font-weight:600;letter-spacing:-.015em}
-.card p{color:var(--ink2);line-height:1.75;margin:0 0 24px;font-size:15.5px}
-.cta{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-size:14.5px;font-weight:500;border-radius:3px;transition:.25s;border:1px solid transparent}
-.btn-a{background:var(--acc);color:#fff}
-.btn-a:hover{background:var(--acc2)}
-.btn-b{border-color:var(--line);color:var(--ink);background:#fff}
-.btn-b:hover{border-color:var(--acc);color:var(--acc)}
-
-section{padding:clamp(52px,6.5vw,92px) 0}
-.alt{background:var(--bg2)}
-.hd{margin-bottom:38px;max-width:66ch}
-.hd h2{font-size:clamp(23px,3vw,34px);font-weight:600;margin:12px 0 0;letter-spacing:-.012em;line-height:1.24}
-.hd p{color:var(--ink2);line-height:1.8;margin:14px 0 0;font-size:15.5px}
-
-/* category cards */
-.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px}
-.cat{background:#fff;border:1px solid var(--line);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
-.cat:hover{border-color:var(--acc);transform:translateY(-3px);box-shadow:0 14px 34px rgba(16,23,29,.1)}
-.cat .im{height:190px;overflow:hidden}
-.cat .im img{width:100%;height:100%;object-fit:cover;transition:.6s}
-.cat:hover .im img{transform:scale(1.06)}
-.cat .tx{padding:20px 20px 22px}
-.cat h3{font-size:18px;font-weight:600;margin:0 0 8px}
-.cat p{color:var(--ink2);font-size:14px;line-height:1.7;margin:0 0 14px}
-.cat .go{font-size:13px;color:var(--acc);font-weight:600;margin-top:auto}
-
-/* gallery */
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
-.gal figure{margin:0;position:relative;overflow:hidden;background:#000;height:min(44vw,230px)}
-.gal img{width:100%;height:100%;object-fit:cover;transition:.6s}
-.gal figure:hover img{transform:scale(1.05)}
-.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;color:#fff;font-size:13px;background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:.3s}
-.gal figure:hover figcaption{opacity:1}
-
-/* facts */
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-.facts div{background:#fff;padding:26px 22px}
-.facts b{display:block;font-size:17px;font-weight:600;margin-bottom:7px}
-.facts span{font-size:14px;color:var(--ink2);line-height:1.7}
-
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px}
-.steps div{background:#fff;border:1px solid var(--line);padding:24px 20px;position:relative}
-.steps i{font-style:normal;font-size:12px;font-weight:700;color:#fff;background:var(--acc);width:26px;height:26px;display:grid;place-items:center;border-radius:50%;margin-bottom:14px}
-.steps h4{font-size:16px;font-weight:600;margin:0 0 8px}
-.steps p{color:var(--ink2);font-size:14px;line-height:1.7;margin:0}
-
-/* request */
-.req{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
-.form{background:#fff;border:1px solid var(--line);padding:clamp(22px,3vw,34px)}
-.form label{display:block;font-size:12.5px;font-weight:600;color:var(--ink2);margin:0 0 6px}
-.form input,.form textarea,.form select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:3px;font:inherit;font-size:15px;margin-bottom:15px;background:#fff;color:var(--ink)}
-.form input:focus,.form textarea:focus,.form select:focus{outline:2px solid var(--acc);outline-offset:-1px;border-color:var(--acc)}
-.form textarea{min-height:88px;resize:vertical}
-.form button{width:100%;padding:15px;background:var(--acc);color:#fff;border:0;border-radius:3px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:.25s}
-.form button:hover{background:var(--acc2)}
-.done{display:none;background:#e8f6ee;border:1px solid #b6e0c9;color:#166b45;padding:14px 16px;border-radius:3px;font-size:14.5px;line-height:1.6;margin-top:12px}
-.chan{display:flex;flex-direction:column;gap:10px;margin-top:22px}
-.chan a{display:flex;align-items:center;gap:13px;padding:15px 18px;background:#fff;border:1px solid var(--line);border-radius:3px;font-size:15px;transition:.25s}
-.chan a:hover{border-color:var(--acc);color:var(--acc)}
-.chan em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--acc);min-width:84px;text-transform:uppercase}
-.map{border:1px solid var(--line);background:var(--bg3);height:210px;display:grid;place-items:center;color:var(--mut);font-size:14px;margin-top:22px;text-align:center;padding:16px;line-height:1.6}
-
-footer{background:var(--acc2);color:#b9d4e3;padding:30px 0;font-size:13.5px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
-footer a{color:#dcecf5}
-
-.ru{display:none}
-.facts b.ru,.cat h3.ru,.steps h4.ru,.hd h2.ru,.card h1.ru{display:none}
-body.ru .hy,body.ru .facts b.hy,body.ru .cat h3.hy,body.ru .steps h4.hy,body.ru .hd h2.hy,body.ru .card h1.hy{display:none}
-body.ru .ru{display:block}
-body.ru span.ru,body.ru em.ru,body.ru b.ru.inl{display:inline}
-
-.rev{opacity:0;transform:translateY(18px);transition:.75s cubic-bezier(.2,.7,.3,1)}
-.rev.in{opacity:1;transform:none}
-
-@media(max-width:900px){
-  .menu{display:none}
-  .burger{display:block}
-  .nav.open .menu{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:4px 4vw 12px}
-  .nav.open .menu a{padding:12px 0;border-bottom:1px solid var(--line)}
-  .top .sp{width:100%;margin-left:0;gap:14px}
-  .hero .ph{height:min(72vw,330px)}
-  .card{margin-top:-46px;max-width:none}
-  .req{grid-template-columns:1fr}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -158,12 +31,14 @@ body.ru span.ru,body.ru em.ru,body.ru b.ru.inl{display:inline}
 
 <nav class="nav" id="nav">
   <div class="wrap">
-    <a href="#" class="logo"><b>ՌԵԳԱԼ ՊԼԱՍՏ</b><span>Regal Plast</span></a>
+    <a href="index.html" class="logo"><b>ՌԵԳԱԼ ՊԼԱՍՏ</b><span>Regal Plast</span></a>
     <div class="menu" id="menu">
-      <a href="#cats"><span class="hy">Ուղղություններ</span><span class="ru">Направления</span></a>
-      <a href="#work"><span class="hy">Գործեր</span><span class="ru">Работы</span></a>
-      <a href="#how"><span class="hy">Ընթացքը</span><span class="ru">Процесс</span></a>
-      <a href="#req"><span class="hy">Հայտ</span><span class="ru">Заявка</span></a>
+      <a href="patuhanner.html"><span class="hy">Պատուհաններ</span><span class="ru">Окна</span></a>
+      <a href="apaki.html"><span class="hy">Ապակի</span><span class="ru">Стекло</span></a>
+      <a href="vitrazh.html"><span class="hy">Վիտրաժ</span><span class="ru">Витражи</span></a>
+      <a href="kahuyq.html"><span class="hy">Կահույք</span><span class="ru">Мебель</span></a>
+      <a href="enkerutyun.html"><span class="hy">Ընկերությունը</span><span class="ru">Компания</span></a>
+      <a href="kap.html"><span class="hy">Կապ</span><span class="ru">Контакты</span></a>
     </div>
     <div class="lang">
       <button class="on" onclick="L(0,this)">ՀԱՅ</button>
@@ -200,42 +75,42 @@ body.ru span.ru,body.ru em.ru,body.ru b.ru.inl{display:inline}
       <p class="ru">Четыре отдельных направления в одном производстве. На объекте это значит один ответственный, один график и один счёт.</p>
     </div>
     <div class="cats rev">
-      <article class="cat">
+      <a class="cat" href="patuhanner.html">
         <div class="im"><img src="img/86111459.webp" alt=""></div>
         <div class="tx">
           <h3 class="hy">Պատուհաններ և դռներ</h3><h3 class="ru">Окна и двери</h3>
           <p class="hy">Մետաղապլաստե պատուհաններ, մուտքի և բալկոնի դռներ։ Հնարավոր է ապառիկ։</p>
           <p class="ru">Металлопластиковые окна, входные и балконные двери. Возможна рассрочка.</p>
-          <div class="go"><span class="hy">Չափումն անվճար է →</span><span class="ru">Замер бесплатный →</span></div>
+          <div class="go"><span class="hy">Մանրամասն →</span><span class="ru">Подробнее →</span></div>
         </div>
-      </article>
-      <article class="cat">
+      </a>
+      <a class="cat" href="apaki.html">
         <div class="im"><img src="img/88496951.webp" alt=""></div>
         <div class="tx">
           <h3 class="hy">Ապակե միջնապատեր և ցուցափեղկեր</h3><h3 class="ru">Стеклянные перегородки и витрины</h3>
           <p class="hy">Գրասենյակային միջնապատեր, խանութի ցուցափեղկեր, ապակե դռներ՝ ֆուռնիտուրայով։</p>
           <p class="ru">Офисные перегородки, витрины магазинов, стеклянные двери с фурнитурой.</p>
-          <div class="go"><span class="hy">Տեսնել գործերը →</span><span class="ru">Смотреть работы →</span></div>
+          <div class="go"><span class="hy">Մանրամասն →</span><span class="ru">Подробнее →</span></div>
         </div>
-      </article>
-      <article class="cat">
+      </a>
+      <a class="cat" href="vitrazh.html">
         <div class="im"><img src="img/89393834.webp" alt=""></div>
         <div class="tx">
           <h3 class="hy">Վիտրաժ և ապակեփաթեթ</h3><h3 class="ru">Витражи и стеклопакеты</h3>
           <p class="hy">Վիտրաժների պատրաստում, ապակեփաթեթի արտադրություն և փոխարինում։</p>
           <p class="ru">Изготовление витражей, производство и замена стеклопакетов.</p>
-          <div class="go"><span class="hy">Ցանկացած չափ →</span><span class="ru">Любой размер →</span></div>
+          <div class="go"><span class="hy">Մանրամասն →</span><span class="ru">Подробнее →</span></div>
         </div>
-      </article>
-      <article class="cat">
+      </a>
+      <a class="cat" href="kahuyq.html">
         <div class="im"><img src="img/103296054.webp" alt=""></div>
         <div class="tx">
           <h3 class="hy">Կահույք պատվերով</h3><h3 class="ru">Мебель на заказ</h3>
           <p class="hy">Խոհանոցներ, պահարաններ, շքամուտքի և ննջասենյակի կահույք՝ Ձեր չափով։</p>
           <p class="ru">Кухни, шкафы, прихожие и спальни — по вашим размерам.</p>
-          <div class="go"><span class="hy">Նախագիծը՝ անվճար →</span><span class="ru">Проект бесплатно →</span></div>
+          <div class="go"><span class="hy">Մանրամասն →</span><span class="ru">Подробнее →</span></div>
         </div>
-      </article>
+      </a>
     </div>
   </div>
 </section>
@@ -341,16 +216,6 @@ body.ru span.ru,body.ru em.ru,body.ru b.ru.inl{display:inline}
   </div>
 </footer>
 
-<script>
-function L(i,b){document.body.classList.toggle('ru',i===1);document.querySelectorAll('.lang button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.documentElement.lang=i?'ru':'hy';
-  const ru=i===1, o=document.querySelectorAll('#s option');
-  const hy=['Պատուհաններ և դռներ','Ապակե միջնապատ / ցուցափեղկ','Վիտրաժ, ապակեփաթեթ','Կահույք պատվերով'];
-  const rr=['Окна и двери','Стеклянная перегородка / витрина','Витраж, стеклопакет','Мебель на заказ'];
-  o.forEach((x,k)=>x.textContent=ru?rr[k]:hy[k]);}
-function S(f){document.getElementById('done').style.display='block';f.querySelector('button').disabled=true;return false}
-const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
-document.querySelectorAll('.rev').forEach(e=>io.observe(e));
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
-</script>
+<script src="app.js"></script>
 </body>
 </html>
