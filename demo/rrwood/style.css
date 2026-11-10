@@ -25,7 +25,7 @@ body.ru .ru{display:inline}
 .nav{position:sticky;top:0;z-index:50;background:rgba(247,243,236,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:18px;padding:15px 0}
 .logo b{font-size:20px;font-weight:700;letter-spacing:.06em;color:var(--acc)}
-.logo span{display:block;font-size:10px;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;margin-top:2px}
+.logo>span{display:block;font-size:10px;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;margin-top:2px}
 .menu{margin-left:auto;display:flex;gap:20px;font-size:14.5px;color:var(--ink2)}
 .menu a:hover,.menu a.nv{color:var(--acc);font-weight:600}
 .lang{display:flex;gap:8px;font-size:12px;font-weight:700}
