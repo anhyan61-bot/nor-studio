@@ -156,3 +156,8 @@ body.ru span.ru,body.ru em.ru,body.ru b.ru.inl{display:inline}
 
 .menu{gap:20px}
 @media(max-width:1150px){.menu{gap:15px;font-size:13.5px}}
+
+/* display:block rules out-specify .ru{display:none} — pin them per language */
+.form label.ru,.hours b.ru{display:none}
+body.ru .form label.hy,body.ru .hours b.hy{display:none}
+body.ru .form label.ru,body.ru .hours b.ru{display:block}
