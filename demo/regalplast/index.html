@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ռեգալ Պլաստ — պատուհաններ, դռներ, ապակեփաթեթ, վիտրաժ, կահույք</title>
+<meta name="description" content="Մետաղապլաստե պատուհաններ և դռներ, ապակեփաթեթ, վիտրաժ, ապակե միջնապատեր և ցուցափեղկեր, խոհանոցային կահույք։ Չափում, արտադրություն, տեղադրում։ Երևան։">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Ռեգալ Պլաստ — պատուհաններ, դռներ, ապակի, կահույք">
+<meta property="og:description" content="Չորս ուղղություն մեկ արտադրությունում՝ չափումից մինչև տեղադրում։ Նաև ապառիկ։">
+<meta property="og:image" content="https://anhyan61-bot.github.io/nor-studio/demo/regalplast/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://anhyan61-bot.github.io/nor-studio/demo/regalplast/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg2:#f1f4f6; --bg3:#e6ebef; --line:#d7dee3;
+  --ink:#10171d; --ink2:#4a5660; --mut:#7d8a94;
+  --acc:#17628c; --acc2:#0f4a6b; --ok:#1f8a5a;
+  --sans:"Noto Sans Armenian",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:16px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);font-weight:600}
+
+/* topbar */
+.top{background:var(--acc2);color:#cfe3ef;font-size:13px}
+.top .wrap{display:flex;gap:22px;align-items:center;padding:9px 0;flex-wrap:wrap}
+.top b{color:#fff;font-weight:500}
+.top .sp{margin-left:auto;display:flex;gap:16px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;padding:14px 0}
+.logo{display:flex;flex-direction:column;line-height:1.05}
+.logo b{font-size:19px;font-weight:700;letter-spacing:.04em}
+.logo span{font-size:10px;letter-spacing:.22em;color:var(--mut);text-transform:uppercase;margin-top:3px}
+.menu{margin-left:auto;display:flex;gap:26px;font-size:14.5px;color:var(--ink2)}
+.menu a:hover{color:var(--acc)}
+.lang{display:flex;gap:9px;font-size:12px;font-weight:600}
+.lang button{all:unset;cursor:pointer;color:var(--mut);padding:3px 7px;border-radius:3px}
+.lang button.on{background:var(--acc);color:#fff}
+.burger{display:none;margin-left:auto;width:28px;height:19px;position:relative;cursor:pointer}
+.burger span{position:absolute;left:0;right:0;height:2px;background:var(--ink);border-radius:2px}
+.burger span:nth-child(1){top:0}.burger span:nth-child(2){top:8.5px}.burger span:nth-child(3){top:17px}
+
+/* hero: photo band + overlapping white card */
+.hero{position:relative;background:var(--bg2)}
+.hero .ph{height:min(70vw,540px);overflow:hidden}
+.hero .ph img{width:100%;height:100%;object-fit:cover}
+.hero .wrap{position:relative}
+.card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--acc);padding:clamp(24px,3.4vw,44px);max-width:620px;margin-top:clamp(-150px,-14vw,-90px);position:relative;z-index:2;box-shadow:0 18px 50px rgba(16,23,29,.12)}
+.card h1{font-size:clamp(25px,3.6vw,42px);line-height:1.16;margin:14px 0 14px;font-weight:600;letter-spacing:-.015em}
+.card p{color:var(--ink2);line-height:1.75;margin:0 0 24px;font-size:15.5px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-size:14.5px;font-weight:500;border-radius:3px;transition:.25s;border:1px solid transparent}
+.btn-a{background:var(--acc);color:#fff}
+.btn-a:hover{background:var(--acc2)}
+.btn-b{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-b:hover{border-color:var(--acc);color:var(--acc)}
+
+section{padding:clamp(52px,6.5vw,92px) 0}
+.alt{background:var(--bg2)}
+.hd{margin-bottom:38px;max-width:66ch}
+.hd h2{font-size:clamp(23px,3vw,34px);font-weight:600;margin:12px 0 0;letter-spacing:-.012em;line-height:1.24}
+.hd p{color:var(--ink2);line-height:1.8;margin:14px 0 0;font-size:15.5px}
+
+/* category cards */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px}
+.cat{background:#fff;border:1px solid var(--line);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.cat:hover{border-color:var(--acc);transform:translateY(-3px);box-shadow:0 14px 34px rgba(16,23,29,.1)}
+.cat .im{height:190px;overflow:hidden}
+.cat .im img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.cat:hover .im img{transform:scale(1.06)}
+.cat .tx{padding:20px 20px 22px}
+.cat h3{font-size:18px;font-weight:600;margin:0 0 8px}
+.cat p{color:var(--ink2);font-size:14px;line-height:1.7;margin:0 0 14px}
+.cat .go{font-size:13px;color:var(--acc);font-weight:600;margin-top:auto}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.gal figure{margin:0;position:relative;overflow:hidden;background:#000;height:min(44vw,230px)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;color:#fff;font-size:13px;background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:.3s}
+.gal figure:hover figcaption{opacity:1}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.facts div{background:#fff;padding:26px 22px}
+.facts b{display:block;font-size:17px;font-weight:600;margin-bottom:7px}
+.facts span{font-size:14px;color:var(--ink2);line-height:1.7}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px}
+.steps div{background:#fff;border:1px solid var(--line);padding:24px 20px;position:relative}
+.steps i{font-style:normal;font-size:12px;font-weight:700;color:#fff;background:var(--acc);width:26px;height:26px;display:grid;place-items:center;border-radius:50%;margin-bottom:14px}
+.steps h4{font-size:16px;font-weight:600;margin:0 0 8px}
+.steps p{color:var(--ink2);font-size:14px;line-height:1.7;margin:0}
+
+/* request */
+.req{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+.form{background:#fff;border:1px solid var(--line);padding:clamp(22px,3vw,34px)}
+.form label{display:block;font-size:12.5px;font-weight:600;color:var(--ink2);margin:0 0 6px}
+.form input,.form textarea,.form select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:3px;font:inherit;font-size:15px;margin-bottom:15px;background:#fff;color:var(--ink)}
+.form input:focus,.form textarea:focus,.form select:focus{outline:2px solid var(--acc);outline-offset:-1px;border-color:var(--acc)}
+.form textarea{min-height:88px;resize:vertical}
+.form button{width:100%;padding:15px;background:var(--acc);color:#fff;border:0;border-radius:3px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:.25s}
+.form button:hover{background:var(--acc2)}
+.done{display:none;background:#e8f6ee;border:1px solid #b6e0c9;color:#166b45;padding:14px 16px;border-radius:3px;font-size:14.5px;line-height:1.6;margin-top:12px}
+.chan{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.chan a{display:flex;align-items:center;gap:13px;padding:15px 18px;background:#fff;border:1px solid var(--line);border-radius:3px;font-size:15px;transition:.25s}
+.chan a:hover{border-color:var(--acc);color:var(--acc)}
+.chan em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--acc);min-width:84px;text-transform:uppercase}
+.map{border:1px solid var(--line);background:var(--bg3);height:210px;display:grid;place-items:center;color:var(--mut);font-size:14px;margin-top:22px;text-align:center;padding:16px;line-height:1.6}
+
+footer{background:var(--acc2);color:#b9d4e3;padding:30px 0;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+footer a{color:#dcecf5}
+
+.ru{display:none}
+.facts b.ru,.cat h3.ru,.steps h4.ru,.hd h2.ru,.card h1.ru{display:none}
+body.ru .hy,body.ru .facts b.hy,body.ru .cat h3.hy,body.ru .steps h4.hy,body.ru .hd h2.hy,body.ru .card h1.hy{display:none}
+body.ru .ru{display:block}
+body.ru span.ru,body.ru em.ru,body.ru b.ru.inl{display:inline}
+
+.rev{opacity:0;transform:translateY(18px);transition:.75s cubic-bezier(.2,.7,.3,1)}
+.rev.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .menu{display:none}
+  .burger{display:block}
+  .nav.open .menu{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:4px 4vw 12px}
+  .nav.open .menu a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .top .sp{width:100%;margin-left:0;gap:14px}
+  .hero .ph{height:min(72vw,330px)}
+  .card{margin-top:-46px;max-width:none}
+  .req{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <span class="hy">Երևան · չափում, արտադրություն, տեղադրում</span>
+    <span class="ru">Ереван · замер, производство, установка</span>
+    <span class="sp"><b>093 085 599</b></span>
+  </div>
+</div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#" class="logo"><b>ՌԵԳԱԼ ՊԼԱՍՏ</b><span>Regal Plast</span></a>
+    <div class="menu" id="menu">
+      <a href="#cats"><span class="hy">Ուղղություններ</span><span class="ru">Направления</span></a>
+      <a href="#work"><span class="hy">Գործեր</span><span class="ru">Работы</span></a>
+      <a href="#how"><span class="hy">Ընթացքը</span><span class="ru">Процесс</span></a>
+      <a href="#req"><span class="hy">Հայտ</span><span class="ru">Заявка</span></a>
+    </div>
+    <div class="lang">
+      <button class="on" onclick="L(0,this)">ՀԱՅ</button>
+      <button onclick="L(1,this)">РУС</button>
+    </div>
+    <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="ph"><img src="img/86111459.webp" alt=""></div>
+  <div class="wrap">
+    <div class="card">
+      <div class="lbl"><span class="hy">Չորս ուղղություն · մեկ արտադրություն</span><span class="ru">Четыре направления · одно производство</span></div>
+      <h1 class="hy">Պատուհան, ապակի և կահույք՝ չափումից մինչև տեղադրում</h1>
+      <h1 class="ru">Окна, стекло и мебель — от замера до установки</h1>
+      <p class="hy">Մետաղապլաստե պատուհաններ և դռներ, ապակեփաթեթ, վիտրաժ, ապակե միջնապատեր ու ցուցափեղկեր, խոհանոցային և ննջասենյակի կահույք։ Ամբողջ օբյեկտը մեկ կապալառուից՝ առանց ենթակապալառուների։</p>
+      <p class="ru">Металлопластиковые окна и двери, стеклопакеты, витражи, стеклянные перегородки и витрины, кухонная и спальная мебель. Весь объект от одного подрядчика, без субподрядов.</p>
+      <div class="cta">
+        <a class="btn btn-a" href="#req"><span class="hy">Հայտ թողնել</span><span class="ru">Оставить заявку</span></a>
+        <a class="btn btn-b" href="#cats"><span class="hy">Ուղղությունները</span><span class="ru">Направления</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="cats">
+  <div class="wrap">
+    <div class="hd rev">
+      <div class="lbl">01 — <span class="hy">ՈՒՂՂՈՒԹՅՈՒՆՆԵՐ</span><span class="ru">НАПРАВЛЕНИЯ</span></div>
+      <h2 class="hy">Ինչ ենք արտադրում</h2>
+      <h2 class="ru">Что мы производим</h2>
+      <p class="hy">Չորս առանձին ուղղություն՝ մեկ արտադրամասում։ Շինհրապարակում դա նշանակում է մեկ պատասխանատու, մեկ ժամանակացույց և մեկ հաշիվ։</p>
+      <p class="ru">Четыре отдельных направления в одном производстве. На объекте это значит один ответственный, один график и один счёт.</p>
+    </div>
+    <div class="cats rev">
+      <article class="cat">
+        <div class="im"><img src="img/86111459.webp" alt=""></div>
+        <div class="tx">
+          <h3 class="hy">Պատուհաններ և դռներ</h3><h3 class="ru">Окна и двери</h3>
+          <p class="hy">Մետաղապլաստե պատուհաններ, մուտքի և բալկոնի դռներ։ Հնարավոր է ապառիկ։</p>
+          <p class="ru">Металлопластиковые окна, входные и балконные двери. Возможна рассрочка.</p>
+          <div class="go"><span class="hy">Չափումն անվճար է →</span><span class="ru">Замер бесплатный →</span></div>
+        </div>
+      </article>
+      <article class="cat">
+        <div class="im"><img src="img/88496951.webp" alt=""></div>
+        <div class="tx">
+          <h3 class="hy">Ապակե միջնապատեր և ցուցափեղկեր</h3><h3 class="ru">Стеклянные перегородки и витрины</h3>
+          <p class="hy">Գրասենյակային միջնապատեր, խանութի ցուցափեղկեր, ապակե դռներ՝ ֆուռնիտուրայով։</p>
+          <p class="ru">Офисные перегородки, витрины магазинов, стеклянные двери с фурнитурой.</p>
+          <div class="go"><span class="hy">Տեսնել գործերը →</span><span class="ru">Смотреть работы →</span></div>
+        </div>
+      </article>
+      <article class="cat">
+        <div class="im"><img src="img/89393834.webp" alt=""></div>
+        <div class="tx">
+          <h3 class="hy">Վիտրաժ և ապակեփաթեթ</h3><h3 class="ru">Витражи и стеклопакеты</h3>
+          <p class="hy">Վիտրաժների պատրաստում, ապակեփաթեթի արտադրություն և փոխարինում։</p>
+          <p class="ru">Изготовление витражей, производство и замена стеклопакетов.</p>
+          <div class="go"><span class="hy">Ցանկացած չափ →</span><span class="ru">Любой размер →</span></div>
+        </div>
+      </article>
+      <article class="cat">
+        <div class="im"><img src="img/103296054.webp" alt=""></div>
+        <div class="tx">
+          <h3 class="hy">Կահույք պատվերով</h3><h3 class="ru">Мебель на заказ</h3>
+          <p class="hy">Խոհանոցներ, պահարաններ, շքամուտքի և ննջասենյակի կահույք՝ Ձեր չափով։</p>
+          <p class="ru">Кухни, шкафы, прихожие и спальни — по вашим размерам.</p>
+          <div class="go"><span class="hy">Նախագիծը՝ անվճար →</span><span class="ru">Проект бесплатно →</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="work">
+  <div class="wrap">
+    <div class="hd rev">
+      <div class="lbl">02 — <span class="hy">ԳՈՐԾԵՐ</span><span class="ru">РАБОТЫ</span></div>
+      <h2 class="hy">Արդեն հանձնված օբյեկտներ</h2>
+      <h2 class="ru">Уже сданные объекты</h2>
+    </div>
+    <div class="gal rev">
+      <figure><img src="img/88496952.webp" alt=""><figcaption><span class="hy">Խանութի ապակե ցուցափեղկ, փողոցային ճակատ</span><span class="ru">Стеклянная витрина магазина, уличный фасад</span></figcaption></figure>
+      <figure><img src="img/103296057.webp" alt=""><figcaption><span class="hy">Խոհանոց՝ ներկառուցված տեխնիկայով</span><span class="ru">Кухня со встроенной техникой</span></figcaption></figure>
+      <figure><img src="img/89393835.webp" alt=""><figcaption><span class="hy">Ապակե ճակատ՝ ամբողջ բարձրությամբ</span><span class="ru">Стеклянный фасад во всю высоту</span></figcaption></figure>
+      <figure><img src="img/103296055.webp" alt=""><figcaption><span class="hy">Հանդերձարան՝ առանց բռնակների</span><span class="ru">Гардероб без ручек</span></figcaption></figure>
+      <figure><img src="img/103296059.webp" alt=""><figcaption><span class="hy">Փայտե ռեյկա և թաքնված լուսավորություն</span><span class="ru">Деревянная рейка и скрытая подсветка</span></figcaption></figure>
+      <figure><img src="img/103296056.webp" alt=""><figcaption><span class="hy">Ննջասենյակի պահարան</span><span class="ru">Шкаф в спальне</span></figcaption></figure>
+      <figure><img src="img/86111458.webp" alt=""><figcaption><span class="hy">Տեղադրում օբյեկտում</span><span class="ru">Монтаж на объекте</span></figcaption></figure>
+      <figure><img src="img/103296058.webp" alt=""><figcaption><span class="hy">Խոհանոց՝ քարե աշխատանքային մակերեսով</span><span class="ru">Кухня с каменной столешницей</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="facts rev">
+      <div><b class="hy">Չափումն անվճար է</b><b class="ru">Замер бесплатный</b><span class="hy">գալիս ենք օբյեկտ և տալիս հաշվարկ</span><span class="ru">выезжаем на объект и даём расчёт</span></div>
+      <div><b class="hy">Ապառիկ</b><b class="ru">Рассрочка</b><span class="hy">պատուհանների և դռների համար</span><span class="ru">на окна и двери</span></div>
+      <div><b class="hy">Տեղադրումը՝ մեր ուժերով</b><b class="ru">Монтаж своими силами</b><span class="hy">ոչ թե ենթակապալառուներով</span><span class="ru">а не субподрядчиками</span></div>
+      <div><b class="hy">Աշխատում ենք կազմակերպությունների հետ</b><b class="ru">Работаем с организациями</b><span class="hy">պայմանագրով և փաստաթղթերով</span><span class="ru">по договору и с документами</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="how">
+  <div class="wrap">
+    <div class="hd rev">
+      <div class="lbl">03 — <span class="hy">ԸՆԹԱՑՔԸ</span><span class="ru">ПРОЦЕСС</span></div>
+      <h2 class="hy">Չորս քայլ՝ հայտից մինչև հանձնում</h2>
+      <h2 class="ru">Четыре шага — от заявки до сдачи</h2>
+    </div>
+    <div class="steps rev">
+      <div><i>1</i><h4 class="hy">Հայտ և չափում</h4><h4 class="ru">Заявка и замер</h4>
+        <p class="hy">Թողնում եք հայտը, նույն կամ հաջորդ օրը գալիս ենք չափելու։ Անվճար է։</p>
+        <p class="ru">Оставляете заявку, в тот же или на следующий день приезжаем на замер. Бесплатно.</p></div>
+      <div><i>2</i><h4 class="hy">Հաշվարկ և պայմանագիր</h4><h4 class="ru">Расчёт и договор</h4>
+        <p class="hy">Ստանում եք գրավոր հաշվարկ՝ նյութով, ժամկետով և գնով։</p>
+        <p class="ru">Получаете письменный расчёт с материалом, сроком и ценой.</p></div>
+      <div><i>3</i><h4 class="hy">Արտադրություն</h4><h4 class="ru">Производство</h4>
+        <p class="hy">Պատրաստում ենք մեր արտադրամասում՝ համաձայնեցված ժամկետում։</p>
+        <p class="ru">Изготавливаем на своём производстве в согласованный срок.</p></div>
+      <div><i>4</i><h4 class="hy">Տեղադրում և հանձնում</h4><h4 class="ru">Монтаж и сдача</h4>
+        <p class="hy">Տեղադրում ենք, կարգավորում ֆուռնիտուրան և մաքրում օբյեկտը։</p>
+        <p class="ru">Монтируем, настраиваем фурнитуру и убираем за собой.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="req">
+  <div class="wrap">
+    <div class="hd rev">
+      <div class="lbl">04 — <span class="hy">ՀԱՅՏ</span><span class="ru">ЗАЯВКА</span></div>
+      <h2 class="hy">Թողեք հայտը — կզանգենք և կհաշվարկենք</h2>
+      <h2 class="ru">Оставьте заявку — перезвоним и посчитаем</h2>
+      <p class="hy">Գրեք, թե ինչ է պետք և որտեղ։ Եթե չափերը դեռ չկան, բավական է հասցեն՝ կգանք և կչափենք անվճար։</p>
+      <p class="ru">Напишите, что нужно и где. Если размеров ещё нет, достаточно адреса — приедем и замерим бесплатно.</p>
+    </div>
+    <div class="req rev">
+      <form class="form" onsubmit="return S(this)">
+        <label class="hy" for="n">Անուն</label><label class="ru" for="n">Имя</label>
+        <input id="n" required>
+        <label class="hy" for="t">Հեռախոս</label><label class="ru" for="t">Телефон</label>
+        <input id="t" type="tel" required placeholder="0XX XX XX XX">
+        <label class="hy" for="s">Ուղղություն</label><label class="ru" for="s">Направление</label>
+        <select id="s">
+          <option class="hy">Պատուհաններ և դռներ</option>
+          <option class="hy">Ապակե միջնապատ / ցուցափեղկ</option>
+          <option class="hy">Վիտրաժ, ապակեփաթեթ</option>
+          <option class="hy">Կահույք պատվերով</option>
+        </select>
+        <label class="hy" for="m">Ինչ է պետք</label><label class="ru" for="m">Что нужно</label>
+        <textarea id="m" placeholder="..."></textarea>
+        <button type="submit"><span class="hy">Ուղարկել հայտը</span><span class="ru">Отправить заявку</span></button>
+        <div class="done" id="done"><span class="hy">Հայտն ընդունված է։ Կզանգենք աշխատանքային ժամերին։</span><span class="ru">Заявка принята. Перезвоним в рабочее время.</span></div>
+      </form>
+      <div>
+        <div class="chan">
+          <a href="tel:+37493085599"><em>ՀԵՌ.</em><span>093 085 599</span></a>
+          <a href="https://wa.me/37493085599" target="_blank" rel="noopener"><em>WhatsApp</em><span class="hy">գրել WhatsApp-ով</span><span class="ru">написать в WhatsApp</span></a>
+          <a href="viber://chat?number=%2B37493085599"><em>Viber</em><span class="hy">գրել Viber-ով</span><span class="ru">написать в Viber</span></a>
+        </div>
+        <div class="map"><span class="hy">Այստեղ կդնենք Ձեր արտադրամասի քարտեզը՝<br>հասցեն և երթուղին մեկ հպումով</span><span class="ru">Здесь разместим карту вашего производства:<br>адрес и маршрут в одно касание</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 <b style="color:#fff">ՌԵԳԱԼ ՊԼԱՍՏ</b> — <span class="hy">պատուհաններ, ապակի, կահույք</span><span class="ru">окна, стекло, мебель</span> · 093 085 599</span>
+    <a href="https://anhyan61-bot.github.io/nor-studio/" target="_blank" rel="noopener"><span class="hy">Ցուցադրական կայք · Nor Studio</span><span class="ru">Демонстрационный сайт · Nor Studio</span></a>
+  </div>
+</footer>
+
+<script>
+function L(i,b){document.body.classList.toggle('ru',i===1);document.querySelectorAll('.lang button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.documentElement.lang=i?'ru':'hy';
+  const ru=i===1, o=document.querySelectorAll('#s option');
+  const hy=['Պատուհաններ և դռներ','Ապակե միջնապատ / ցուցափեղկ','Վիտրաժ, ապակեփաթեթ','Կահույք պատվերով'];
+  const rr=['Окна и двери','Стеклянная перегородка / витрина','Витраж, стеклопакет','Мебель на заказ'];
+  o.forEach((x,k)=>x.textContent=ru?rr[k]:hy[k]);}
+function S(f){document.getElementById('done').style.display='block';f.querySelector('button').disabled=true;return false}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.rev').forEach(e=>io.observe(e));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
