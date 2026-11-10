@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iRent — շինարարական գործիքների վարձույթ</title>
+<meta name="description" content="iRent ՍՊԸ — գեներատոր, վիբրոպլիտա, բետոնի վիբրատոր, պերֆորատոր, եռակցման ապարատ, բետոնախառնիչ։ Օրավարձով, անվճար առաքումով։">
+<meta property="og:title" content="iRent — շինարարական գործիքների վարձույթ">
+<meta property="og:description" content="Ամբողջ պարկը մեկ էջում՝ օրավարձերով։">
+<meta property="og:image" content="https://anhyan61-bot.github.io/nor-studio/demo/irent/og.png">
+<meta property="og:url" content="https://anhyan61-bot.github.io/nor-studio/demo/irent/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15181d; --ink2:#2a3038; --mut:#6d7681; --line:#e2e6ea;
+  --bg:#f6f7f9; --card:#fff; --acc:#f5a524; --acc2:#c97f06;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 Manrope,system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+
+/* լեզու */
+.ru{display:none}
+body.ru .hy{display:none}
+body.ru .ru{display:inline}
+
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+
+.ribbon{background:var(--ink);color:#fff;font-size:13px;padding:9px 0;text-align:center;font-weight:600}
+
+header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:21px;letter-spacing:-.03em}
+.logo i{width:13px;height:13px;background:var(--acc);display:inline-block;border-radius:3px;
+  transform:rotate(45deg);flex:none}
+.logo>span{font-size:10.5px;letter-spacing:.17em;color:var(--mut);font-weight:700}
+.spacer{flex:1}
+.lang{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--mut);font:700 12px Manrope,sans-serif;
+  padding:7px 11px;cursor:pointer;letter-spacing:.05em}
+.lang button.on{background:var(--ink);color:#fff}
+
+.hero{padding:36px 0 24px}
+.hero h1{margin:0 0 10px;font-size:clamp(26px,4.5vw,43px);line-height:1.1;font-weight:800;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;background:var(--acc);padding:0 8px;border-radius:6px}
+.hero p{margin:0;color:var(--mut);max-width:620px;font-size:16.5px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.facts div{background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:8px 15px;font-size:13.5px;font-weight:600}
+.facts b{color:var(--acc2)}
+
+.tools{position:sticky;top:62px;z-index:30;background:var(--bg);padding:12px 0 10px;
+  border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:7px;overflow-x:auto;padding-bottom:2px}
+.chips button{flex:none;background:#fff;border:1px solid var(--line);color:var(--ink2);
+  font:700 13px Manrope,sans-serif;padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.chips button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.bar{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.cnt{font-size:13.5px;color:var(--mut);font-weight:600}
+.sort{margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:8px;
+  font:600 13px Manrope,sans-serif;padding:7px 11px;color:var(--ink2);cursor:pointer}
+
+main{padding:20px 0 6px}
+.gsec{margin-bottom:26px}
+.gh{display:flex;align-items:center;gap:10px;margin:0 0 12px}
+.gh h2{margin:0;font-size:18px;font-weight:800;letter-spacing:-.02em}
+.gh span.n{background:#e6eaee;color:#56606b;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px}
+.gh hr{flex:1;border:0;border-top:1px solid var(--line);margin:0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:12px}
+.t{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  display:flex;flex-direction:column;transition:.14s}
+.t:hover{box-shadow:0 8px 22px rgba(21,24,29,.09);transform:translateY(-2px);border-color:#ccd3da}
+.ph{height:146px;background:#eef1f4;position:relative;flex:none}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.no{display:flex;align-items:center;justify-content:center;color:#b3bcc6}
+.ph.no svg{width:40px;height:40px}
+.tag{position:absolute;left:9px;bottom:9px;background:var(--ink);color:#fff;
+  font-weight:800;font-size:13.5px;padding:5px 10px;border-radius:8px;letter-spacing:-.01em}
+.tag small{font-weight:600;opacity:.72;font-size:11px}
+.tb{padding:11px 13px 13px;display:flex;flex-direction:column;gap:4px;flex:1}
+.tb h3{margin:0;font-size:14.5px;font-weight:700;line-height:1.3}
+.tb .m{font-size:12.5px;color:var(--mut);font-weight:600}
+.rentbtn{margin-top:auto;padding-top:9px}
+.rentbtn button{width:100%;background:var(--acc);border:0;color:var(--ink);
+  font:800 13.5px Manrope,sans-serif;padding:9px;border-radius:9px;cursor:pointer}
+.rentbtn button:hover{background:var(--acc2);color:#fff}
+.empty{text-align:center;padding:44px 0;color:var(--mut)}
+
+.cta{background:var(--ink);color:#fff;margin-top:30px;padding:40px 0}
+.cta h2{margin:0 0 9px;font-size:clamp(21px,3vw,30px);font-weight:800;letter-spacing:-.025em}
+.cta p{margin:0 0 20px;color:#aab3bd;max-width:560px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{background:var(--acc);border:0;color:var(--ink);font:800 15px Manrope,sans-serif;
+  padding:13px 22px;border-radius:10px;cursor:pointer}
+.btn.g{background:transparent;border:1.5px solid #3b434c;color:#d5dce3}
+.note{margin-top:18px;font-size:12.5px;color:#7a838d}
+
+footer{background:#0d1014;color:#78828c;padding:20px 0;font-size:13px}
+.fin{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+@media(max-width:720px){
+  .hero{padding:26px 0 18px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:9px}
+  .ph{height:112px}
+  .tb{padding:9px 10px 11px}
+  .tb h3{font-size:13.5px}
+  .gh h2{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  <span class="hy">Սա ցուցադրական տարբերակ է՝ պատրաստված iRent-ի list.am-ի հայտարարությունների հիման վրա։</span>
+  <span class="ru">Это демонстрационная версия, собранная по объявлениям iRent на list.am.</span>
+</div>
+
+<header>
+  <div class="wrap hbar">
+    <div class="logo"><i></i>iRent <span class="hy">ՍՊԸ</span><span class="ru">ООО</span></div>
+    <div class="spacer"></div>
+    <div class="lang">
+      <button id="bhy" class="on" onclick="setLang('hy')">ՀԱՅ</button>
+      <button id="bru" onclick="setLang('ru')">РУС</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1><span class="hy">Շինարարական գործիքի <em>վարձույթ</em><br>օրավարձով</span>
+        <span class="ru">Аренда строительного<br>инструмента <em>посуточно</em></span></h1>
+    <p><span class="hy">Գեներատոր, վիբրոպլիտա, բետոնի վիբրատոր, պերֆորատոր, եռակցման ապարատ, բետոնախառնիչ, կոմպրեսոր։ Ամբողջ պարկը՝ մեկ էջում։</span>
+       <span class="ru">Генераторы, виброплиты, вибраторы для бетона, перфораторы, сварочные аппараты, бетономешалки, компрессоры. Весь парк — на одной странице.</span></p>
+    <div class="facts">
+      <div><b id="fn">79</b> <span class="hy">գործիք ցուցադրված</span><span class="ru">инструментов показано</span></div>
+      <div><b>10</b> <span class="hy">խումբ</span><span class="ru">групп</span></div>
+      <div><span class="hy">Օրավարձ՝ </span><span class="ru">В день: </span><b>5 000 – 25 000 <span class="hy">դրամ</span><span class="ru">драм</span></b></div>
+      <div><span class="hy">Առաքումն անվճար է</span><span class="ru">Доставка бесплатная</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="tools">
+  <div class="wrap">
+    <div class="chips" id="chips"></div>
+    <div class="bar">
+      <span class="cnt" id="cnt"></span>
+      <button class="sort" id="sort" onclick="toggleSort()"></button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="out"></main>
+
+<section class="cta">
+  <div class="wrap">
+    <h2><span class="hy">Պատվիրեք գործիքը մեկ հաղորդագրությամբ</span><span class="ru">Закажите инструмент одним сообщением</span></h2>
+    <p><span class="hy">Գրեք՝ որ գործիքը և քանի օրով է պետք։ Հաստատում ենք ազատ լինելը և բերում ենք հասցեով։</span>
+       <span class="ru">Напишите, какой инструмент и на сколько дней. Подтверждаем наличие и привозим по адресу.</span></p>
+    <div class="btns">
+      <button class="btn" onclick="demo()"><span class="hy">Զանգել / WhatsApp</span><span class="ru">Позвонить / WhatsApp</span></button>
+      <button class="btn g" onclick="demo()"><span class="hy">Ամբողջ գնացուցակը</span><span class="ru">Весь прайс</span></button>
+    </div>
+    <div class="note"><span class="hy">Գները և անվանումները վերցված են list.am-ի հայտարարություններից 2026-ի նոյեմբերի 10-ի դրությամբ և ցուցադրական են։</span>
+      <span class="ru">Цены и названия взяты из объявлений на list.am по состоянию на 10 ноября 2026 г. и носят демонстрационный характер.</span></div>
+  </div>
+</section>
+
+<footer><div class="wrap fin">
+  <div><span class="hy">iRent ՍՊԸ — գործիքների վարձույթ</span><span class="ru">iRent — аренда инструмента</span></div>
+  <div><span class="hy">Ցուցադրական տարբերակ՝ Nor Studio</span><span class="ru">Демо-версия: Nor Studio</span></div>
+</div></footer>
+
+<script src="data.js"></script>
+<script>
+var LANG='hy', FILTER='all', SORT='cat';
+function setLang(l){
+  LANG=l;
+  document.body.classList.toggle('ru', l==='ru');
+  document.documentElement.lang=(l==='ru'?'ru':'hy');
+  document.getElementById('bhy').classList.toggle('on', l==='hy');
+  document.getElementById('bru').classList.toggle('on', l==='ru');
+  chips(); render();
+}
+function demo(){ alert(LANG==='hy'
+  ? 'Ցուցադրական տարբերակ։ Իրական կայքում այստեղ բացվում է Ձեր համարը կամ WhatsApp-ը։'
+  : 'Демо-версия. На реальном сайте здесь откроется ваш номер или WhatsApp.'); }
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function num(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+
+function chips(){
+  var h='<button data-k="all"'+(FILTER==='all'?' class="on"':'')+'><span class="hy">Բոլորը</span><span class="ru">Все</span></button>';
+  CATS.forEach(function(c){
+    h+='<button data-k="'+c.id+'"'+(FILTER===c.id?' class="on"':'')+'><span class="hy">'+esc(c.hy)+'</span><span class="ru">'+esc(c.ru)+'</span></button>';
+  });
+  var el=document.getElementById('chips');
+  el.innerHTML=h;
+  el.querySelectorAll('button').forEach(function(b){
+    b.onclick=function(){ FILTER=b.getAttribute('data-k'); chips(); render(); };
+  });
+  document.getElementById('sort').innerHTML = SORT==='cat'
+    ? '<span class="hy">Ըստ խմբի</span><span class="ru">По группам</span>'
+    : '<span class="hy">Ըստ գնի՝ էժանից</span><span class="ru">По цене: сначала дешевле</span>';
+}
+
+var GLYPH='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">'+
+ '<path d="M14.7 6.3a3.5 3.5 0 004.8 4.6l-8 8a2.4 2.4 0 01-3.4-3.4l8-8z"/>'+
+ '<path d="M5 5l3 3"/></svg>';
+
+function card(t){
+  var ph = t.img
+    ? '<div class="ph"><img loading="lazy" src="img/'+t.img+'.webp" alt="">'
+    : '<div class="ph no">'+GLYPH;
+  ph += '<span class="tag">'+num(t.p)+' <small><span class="hy">դրամ/օր</span><span class="ru">драм/сут</span></small></span></div>';
+  return '<article class="t">'+ph+'<div class="tb">'+
+    '<h3><span class="hy">'+esc(t.hy)+'</span><span class="ru">'+esc(t.ru)+'</span></h3>'+
+    (t.m?'<div class="m">'+esc(t.m)+'</div>':'')+
+    '<div class="rentbtn"><button onclick="demo()"><span class="hy">Վարձել</span><span class="ru">Арендовать</span></button></div>'+
+    '</div></article>';
+}
+
+function toggleSort(){ SORT = (SORT==='cat'?'price':'cat'); chips(); render(); }
+
+function render(){
+  var list = TOOLS.filter(function(t){ return FILTER==='all' || t.k===FILTER; });
+  var out=document.getElementById('out');
+  document.getElementById('cnt').innerHTML =
+    '<span class="hy">Ցուցադրվում է '+list.length+' / '+TOOLS.length+'</span>'+
+    '<span class="ru">Показано '+list.length+' / '+TOOLS.length+'</span>';
+  if(!list.length){
+    out.innerHTML='<div class="empty"><span class="hy">Այս խմբում դիրք չկա։</span><span class="ru">В этой группе позиций нет.</span></div>';
+    return;
+  }
+  if(SORT==='price'){
+    var s=list.slice().sort(function(a,b){return a.p-b.p;});
+    out.innerHTML='<div class="grid">'+s.map(card).join('')+'</div>';
+    return;
+  }
+  var html='';
+  CATS.forEach(function(c){
+    var g=list.filter(function(t){return t.k===c.id;});
+    if(!g.length) return;
+    g.sort(function(a,b){return b.p-a.p;});
+    html+='<section class="gsec"><div class="gh"><h2><span class="hy">'+esc(c.hy)+'</span>'+
+      '<span class="ru">'+esc(c.ru)+'</span></h2><span class="n">'+g.length+'</span><hr></div>'+
+      '<div class="grid">'+g.map(card).join('')+'</div></section>';
+  });
+  out.innerHTML=html;
+}
+
+document.getElementById('fn').textContent = TOOLS.length;
+chips(); render();
+if (/(^|[#?&])ru\b/.test(location.hash + location.search)) setLang('ru');
+</script>
+</body>
+</html>
