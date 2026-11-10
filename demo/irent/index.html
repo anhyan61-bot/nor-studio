@@ -240,6 +240,7 @@ function render(){
   if(SORT==='price'){
     var s=list.slice().sort(function(a,b){return a.p-b.p;});
     out.innerHTML='<div class="grid">'+s.map(card).join('')+'</div>';
+    eager();
     return;
   }
   var html='';
@@ -252,6 +253,13 @@ function render(){
       '<div class="grid">'+g.map(card).join('')+'</div></section>';
   });
   out.innerHTML=html;
+  eager();
+}
+
+/* առաջին էկրանի լուսանկարները չսպասեն ոլորմանը */
+function eager(){
+  var im=document.querySelectorAll('#out .t img');
+  for(var i=0;i<im.length && i<8;i++) im[i].removeAttribute('loading');
 }
 
 document.getElementById('fn').textContent = TOOLS.length;
