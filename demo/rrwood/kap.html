@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Կապ — R&amp;RWOOD</title>
+<meta name="description" content="Խանութ-սրահ և արտադրամաս Երևանում, Էրեբունի։ Գրեք՝ ինչ շպոն և ինչ ծավալ է պետք։">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Կապ — R&amp;RWOOD">
+<meta property="og:description" content="Խանութ-սրահ և արտադրամաս Երևանում, Էրեբունի։ Գրեք՝ ինչ շպոն և ինչ ծավալ է պետք։">
+<meta property="og:image" content="https://anhyan61-bot.github.io/nor-studio/demo/rrwood/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span class="hy">Երևան, Էրեբունի · խանութ-սրահ և արտադրամաս</span>
+    <span class="ru">Ереван, Эребуни · салон и производство</span>
+    <span class="sp"><b><span class="hy">100-ից ավելի տեսակ շպոն</span><span class="ru">более 100 видов шпона</span></b></span>
+  </div>
+</div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><b>R&amp;RWOOD</b><span><span class="hy">շպոն և փայտանյութ</span><span class="ru">шпон и древесина</span></span></a>
+    <div class="menu" id="menu">
+      <a href="shpon.html"><span class="hy">Բնական շպոն</span><span class="ru">Натуральный шпон</span></a>
+      <a href="injener.html"><span class="hy">Թիթեղներ</span><span class="ru">Плиты</span></a>
+      <a href="patum.html"><span class="hy">Շպոնապատում</span><span class="ru">Шпонирование</span></a>
+      <a href="sarq.html"><span class="hy">Սարքավորում</span><span class="ru">Оборудование</span></a>
+      <a href="kap.html" class="nv"><span class="hy">Կապ</span><span class="ru">Контакты</span></a>
+    </div>
+    <div class="lang">
+      <button class="on" onclick="L(0,this)">ՀԱՅ</button>
+      <button onclick="L(1,this)">РУС</button>
+    </div>
+    <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="phead">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html"><span class="hy">Գլխավոր</span><span class="ru">Главная</span></a> / <span class="hy">Ընկերությունը և կապը</span><span class="ru">Компания и контакты</span></div>
+    <h1><span class="hy">Ընկերությունը և կապը</span><span class="ru">Компания и контакты</span></h1>
+    <p><span class="hy">R&amp;RWOOD-ը շպոնի, ՄԴՖ-ի և փայտանյութի խանութ-սրահ ու արտադրամաս է Երևանում։ Վաճառում ենք նյութը և նույն տեղում կատարում շպոնապատում։</span><span class="ru">R&amp;RWOOD — салон и производство шпона, МДФ и древесины в Ереване. Продаём материал и здесь же выполняем шпонирование.</span></p>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="req rev">
+      <form class="form" onsubmit="return S(this)">
+        <span class="lab"><span class="hy">Անուն</span><span class="ru">Имя</span></span>
+        <input id="n" required>
+        <span class="lab"><span class="hy">Հեռախոս</span><span class="ru">Телефон</span></span>
+        <input id="t" type="tel" required placeholder="0XX XX XX XX">
+        <span class="lab"><span class="hy">Ինչ է պետք</span><span class="ru">Что нужно</span></span>
+        <select id="s">
+          <option>Բնական շպոն</option>
+          <option>Ինժեներական շպոն</option>
+          <option>ՄԴՖ, ֆաներա, փայտ</option>
+          <option>Շպոնապատման ծառայություն</option>
+          <option>Սարքավորում</option>
+        </select>
+        <span class="lab"><span class="hy">Տեսակ, չափ, ծավալ</span><span class="ru">Вид, размер, объём</span></span>
+        <textarea id="m" placeholder="..."></textarea>
+        <button type="submit"><span class="hy">Ուղարկել հարցումը</span><span class="ru">Отправить запрос</span></button>
+        <div class="done" id="done"><span class="hy">Հարցումն ընդունված է։ Կպատասխանենք աշխատանքային ժամերին։</span><span class="ru">Запрос принят. Ответим в рабочее время.</span></div>
+      </form>
+      <div>
+        <div class="chan">
+          <a href="#"><i><span class="hy">ՀԵՌ.</span><span class="ru">ТЕЛ.</span></i><span class="hy">Ձեր համարը՝ մեկ հպումով</span><span class="ru">Ваш номер в одно касание</span></a>
+          <a href="#"><i>WhatsApp</i><span class="hy">գրել WhatsApp-ով</span><span class="ru">написать в WhatsApp</span></a>
+          <a href="#"><i>Viber</i><span class="hy">գրել Viber-ով</span><span class="ru">написать в Viber</span></a>
+        </div>
+        <div class="hours">
+          <strong><span class="hy">Խանութ-սրահ</span><span class="ru">Салон</span></strong>
+          <span class="hy">Երևան, Էրեբունի<br>Նմուշները կարելի է տեսնել և շոշափել տեղում<br>Կոճակները իրական կայքում միանում են Ձեր համարին</span>
+          <span class="ru">Ереван, Эребуни<br>Образцы можно посмотреть и потрогать на месте<br>На рабочем сайте кнопки подключаются к вашему номеру</span>
+        </div>
+        <div class="map"><span class="hy">Այստեղ կդնենք սրահի քարտեզը՝<br>հասցեն և երթուղին մեկ հպումով</span><span class="ru">Здесь разместим карту салона:<br>адрес и маршрут в одно касание</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© 2026 <b style="color:#fff">R&amp;RWOOD</b> — <span class="hy">շպոն, ՄԴՖ, ֆաներա, փայտանյութ · Երևան, Էրեբունի</span><span class="ru">шпон, МДФ, фанера, древесина · Ереван, Эребуни</span></span>
+    <a href="https://anhyan61-bot.github.io/nor-studio/" target="_blank" rel="noopener"><span class="hy">Ցուցադրական կայք · Nor Studio</span><span class="ru">Демонстрационный сайт · Nor Studio</span></a>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
