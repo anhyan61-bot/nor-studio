@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Պրոֆգիպպս — ալյումինե ստվերային պրոֆիլներ և թաքնված քիվեր</title>
+<meta name="description" content="Պրոֆգիպպս ՍՊԸ — ալյումինե ստվերային պրոֆիլներ գիպսաստվարաթղթի և ձգվող առաստաղների համար, թաքնված քիվեր ԼԵԴ լույսով, ստվերային շրիշակներ, մագնիսական տրեկ։ Երևան, Արաբկիր։">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anhyan61-bot.github.io/nor-studio/demo/profgips/">
+<meta property="og:title" content="Պրոֆգիպպս — ալյումինե ստվերային պրոֆիլներ և թաքնված քիվեր">
+<meta property="og:description" content="27 դիրք՝ ըստ կիրառման։ Առաստաղ, պատ, հատակ, լույս։ Հաստության ընտրիչ՝ 9,5 / 12 / 12,5 / 15 մմ։">
+<meta property="og:image" content="https://anhyan61-bot.github.io/nor-studio/demo/profgips/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#f6f7f8; --card:#fff; --ink:#15171b; --ink2:#444a53; --mut:#7a818a;
+--line:#e1e4e8; --line2:#eceef1; --acc:#242a32; --led:#d9931f;
+--sans:"Noto Sans Armenian",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16px;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+
+/* --- լեզու --- */
+.ru{display:none}
+body.ru .hy{display:none}
+body.ru .ru{display:inline}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+.ribbon{background:var(--acc);color:#dfe3e8;font-size:13px;line-height:1.5;padding:9px 20px;text-align:center}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,247,248,.94);backdrop-filter:blur(10px);
+ border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.logo i{width:12px;height:12px;background:var(--led);border-radius:2px;display:block;flex:none}
+.lang{margin-left:auto;display:flex;gap:2px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:2px}
+.lang button{all:unset;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;
+ padding:5px 10px;border-radius:3px;color:var(--mut)}
+.lang button.on{background:var(--acc);color:#fff}
+
+.hero{padding:54px 0 34px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:700;line-height:1.14;letter-spacing:-.02em;max-width:820px}
+.hero p{margin-top:16px;font-size:clamp(15px,1.7vw,18px);font-weight:300;color:var(--ink2);line-height:1.55;max-width:680px}
+.stats{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:5px;padding:11px 15px;font-size:14px;color:var(--ink2)}
+.stat b{color:var(--ink);font-weight:700}
+
+.tools{position:sticky;top:62px;z-index:40;background:rgba(246,247,248,.96);backdrop-filter:blur(10px);
+ border-bottom:1px solid var(--line);padding:14px 0}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.row+.row{margin-top:10px}
+.lbl{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-right:4px}
+.chip{all:unset;cursor:pointer;font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink2);
+ background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px;white-space:nowrap}
+.chip:hover{border-color:#c6ccd3}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.cnt{margin-left:auto;font-size:13px;color:var(--mut);white-space:nowrap}
+
+main{padding:30px 0 10px}
+.gh{display:flex;align-items:center;gap:12px;margin:26px 0 14px}
+.gh:first-child{margin-top:0}
+.gh h2{font-size:15px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
+.gh span.ln{flex:1;height:1px;background:var(--line)}
+.gh em{font-style:normal;font-size:13px;color:var(--mut);font-weight:500}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:16px}
+.it{background:var(--card);border:1px solid var(--line);border-radius:7px;overflow:hidden;display:flex;flex-direction:column}
+.it .ph{aspect-ratio:4/3;background:#eef0f2;position:relative;overflow:hidden}
+.it .ph img{width:100%;height:100%;object-fit:cover}
+.it .bdg{position:absolute;left:9px;top:9px;background:rgba(36,42,50,.92);color:#fff;font-size:11px;font-weight:700;
+ letter-spacing:.08em;padding:4px 8px;border-radius:3px}
+.it .bdg.led{background:var(--led);color:#1d1403}
+.tx{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.tx h3{font-size:15.5px;font-weight:600;line-height:1.35}
+.tx p{margin-top:6px;font-size:13.5px;font-weight:300;color:var(--mut);line-height:1.45;flex:1}
+.pr{margin-top:13px;font-size:20px;font-weight:700;letter-spacing:-.01em}
+.pr em{font-style:normal;font-size:13px;font-weight:400;color:var(--mut);margin-left:3px}
+.pr.ask{font-size:15px;font-weight:600;color:var(--ink2)}
+
+.guide{margin-top:40px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0}
+.guide h2{font-size:clamp(21px,2.6vw,27px);font-weight:700;letter-spacing:-.01em}
+.steps{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.st{border-left:2px solid var(--led);padding:3px 0 3px 15px}
+.st b{display:block;font-size:15px;font-weight:700;margin-bottom:5px}
+.st>span{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.5}
+
+footer{padding:40px 0 54px}
+.fin{display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start}
+.fin>div{min-width:190px}
+.fin b{display:block;font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut);margin-bottom:7px;font-weight:600}
+.fin p{font-size:15px;color:var(--ink2);line-height:1.6;font-weight:300}
+.note{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mut);line-height:1.6}
+
+@media(max-width:640px){
+ .nav .wrap{height:56px}
+ .tools{top:56px}
+ .logo{font-size:16px;letter-spacing:.1em}
+ .hero{padding:34px 0 24px}
+ .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:11px}
+ .it .ph{aspect-ratio:1/1}
+ .tx{padding:11px 12px 13px}
+ .tx h3{font-size:14px}
+ .tx p{font-size:12.5px}
+ .pr{font-size:17px}
+ .row{gap:6px}
+ .chip{font-size:13px;padding:7px 12px}
+ .cnt{width:100%;margin-left:0;margin-top:2px}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+<span class="hy">Սա ցուցադրական տարբերակ է՝ պատրաստված Պրոֆգիպպսի list.am-ի հայտարարությունների հիման վրա։</span>
+<span class="ru">Это демонстрационная версия, собранная по объявлениям Профгипс на list.am.</span>
+</div>
+
+<nav class="nav"><div class="wrap">
+ <div class="logo"><i></i>Պրոֆգիպպս</div>
+ <div class="lang">
+  <button id="bhy" class="on">ՀԱՅ</button><button id="bru">РУС</button>
+ </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+ <h1>
+  <span class="hy">Ստվերային պրոֆիլ, թաքնված քիվ և լուսային գիծ՝ ըստ այն բանի, թե որտեղ է դրվում</span>
+  <span class="ru">Теневой профиль, скрытый карниз и световая линия — по месту установки</span>
+ </h1>
+ <p>
+  <span class="hy">Գիպսաստվարաթուղթ, ձգվող առաստաղ, պատ, հատակ, թաքնված լուսավորություն։ Ընտրեք բաժինը և հաստությունը՝ մնում են միայն Ձեզ պետք եկող պրոֆիլները։</span>
+  <span class="ru">Гипсокартон, натяжной потолок, стена, пол, скрытая подсветка. Выберите раздел и толщину — останутся только нужные профили.</span>
+ </p>
+ <div class="stats">
+  <div class="stat"><b>27</b> <span class="hy">դիրք տեսականու մեջ</span><span class="ru">позиций в ассортименте</span></div>
+  <div class="stat"><b>4</b> <span class="hy">կիրառման բաժին</span><span class="ru">раздела по применению</span></div>
+  <div class="stat"><span class="hy">Հաստություն՝ </span><span class="ru">Толщина: </span><b>9,5 – 15 մմ</b></div>
+  <div class="stat"><span class="hy">Անվճար առաքում Երևանում</span><span class="ru">Бесплатная доставка по Еревану</span></div>
+ </div>
+</div></header>
+
+<section class="tools"><div class="wrap">
+ <div class="row" id="rapp">
+  <span class="lbl"><span class="hy">Որտեղ</span><span class="ru">Где</span></span>
+ </div>
+ <div class="row" id="rth">
+  <span class="lbl"><span class="hy">Հաստություն</span><span class="ru">Толщина</span></span>
+ </div>
+</div></section>
+
+<main><div class="wrap" id="out"></div></main>
+
+<section class="guide"><div class="wrap">
+ <h2><span class="hy">Ինչպես ընտրել</span><span class="ru">Как выбрать</span></h2>
+ <div class="steps">
+  <div class="st"><b><span class="hy">1. Որոշեք տեղը</span><span class="ru">1. Определите место</span></b>
+   <span><span class="hy">Առաստաղ, պատ, հատակ, թե՞ թաքնված լույս։ Ամեն տեղ իր պրոֆիլն ունի։</span><span class="ru">Потолок, стена, пол или скрытый свет. Для каждого места свой профиль.</span></span></div>
+  <div class="st"><b><span class="hy">2. Չափեք գիպսաստվարաթուղթը</span><span class="ru">2. Измерьте гипсокартон</span></b>
+   <span><span class="hy">9,5 մմ՝ առաստաղի թերթ, 12 և 12,5 մմ՝ ստանդարտ, 15 մմ՝ խոնավակայուն ու հրակայուն։</span><span class="ru">9,5 мм — потолочный лист, 12 и 12,5 мм — стандарт, 15 мм — влаго- и огнестойкий.</span></span></div>
+  <div class="st"><b><span class="hy">3. Լույս պե՞տք է</span><span class="ru">3. Нужен ли свет</span></b>
+   <span><span class="hy">Թաքնված քիվերն ու լուսային գծերն ունեն ԼԵԴ ժապավենի ալիք։ Նշված են դեղին պիտակով։</span><span class="ru">У скрытых карнизов и световых линий есть канал под LED-ленту. Отмечены жёлтой меткой.</span></span></div>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fin">
+  <div><b><span class="hy">Հասցե</span><span class="ru">Адрес</span></b>
+   <p><span class="hy">Երևան, Արաբկիր</span><span class="ru">Ереван, Арабкир</span></p></div>
+  <div><b><span class="hy">Առաքում</span><span class="ru">Доставка</span></b>
+   <p><span class="hy">Անվճար՝ Երևանում և հարակից մարզերում</span><span class="ru">Бесплатно по Еревану и ближним областям</span></p></div>
+  <div><b><span class="hy">Պատվեր</span><span class="ru">Заказ</span></b>
+   <p><span class="hy">Հեռախոս, Viber, WhatsApp</span><span class="ru">Телефон, Viber, WhatsApp</span></p></div>
+ </div>
+ <div class="note">
+  <span class="hy">Ցուցադրական էջ։ Տեքստերը, անվանումները և գները վերցված են list.am-ի հայտարարություններից և կճշտվեն։</span>
+  <span class="ru">Демонстрационная страница. Тексты, названия и цены взяты из объявлений на list.am и будут уточнены.</span>
+ </div>
+</div></footer>
+
+<script src="data.js"></script>
+<script>
+(function(){
+ var fApp='all', fTh=0;
+ var out=document.getElementById('out');
+ var TH=[9.5,12,12.5,15];
+
+ function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+ function L(hy,ru){return '<span class="hy">'+hy+'</span><span class="ru">'+ru+'</span>';}
+
+ /* --- չիպեր --- */
+ var rapp=document.getElementById('rapp'), rth=document.getElementById('rth');
+ function chip(txt,on,fn){
+  var b=document.createElement('button');
+  b.className='chip'+(on?' on':''); b.innerHTML=txt;
+  b.onclick=fn; return b;
+ }
+ function buildChips(){
+  while(rapp.children.length>1) rapp.removeChild(rapp.lastChild);
+  while(rth.children.length>1) rth.removeChild(rth.lastChild);
+  rapp.appendChild(chip(L('Բոլորը','Все'), fApp==='all', function(){fApp='all';render();}));
+  window.APPS.forEach(function(a){
+   rapp.appendChild(chip(L(a.hy,a.ru), fApp===a.k, function(){fApp=a.k;render();}));
+  });
+  rth.appendChild(chip(L('Բոլորը','Все'), fTh===0, function(){fTh=0;render();}));
+  TH.forEach(function(t){
+   var lab=String(t).replace('.',',')+' մմ';
+   var labr=String(t).replace('.',',')+' мм';
+   rth.appendChild(chip(L(lab,labr), fTh===t, function(){fTh=t;render();}));
+  });
+  var c=document.createElement('span'); c.className='cnt'; c.id='cnt'; rth.appendChild(c);
+ }
+
+ function card(x){
+  var bdg='';
+  if(x.c) bdg='<div class="bdg'+(x.led?' led':'')+'">'+x.c+'</div>';
+  else if(x.led) bdg='<div class="bdg led">LED</div>';
+  else if(x.th) bdg='<div class="bdg">'+String(x.th).replace('.',',')+' մմ</div>';
+  var pr = x.p
+   ? '<div class="pr">'+fmt(x.p)+' <em>'+L('դրամ','драм')+'</em></div>'
+   : '<div class="pr ask">'+L('Պատվերով','По запросу')+'</div>';
+  return '<article class="it"><div class="ph">'+bdg+
+   '<img src="img/'+x.i+'.webp" alt="" loading="lazy"></div>'+
+   '<div class="tx"><h3>'+L(x.hy,x.ru)+'</h3><p>'+L(x.shy,x.sru)+'</p>'+pr+'</div></article>';
+ }
+
+ function eager(){
+  var im=document.querySelectorAll('#out .it img');
+  for(var i=0;i<im.length && i<8;i++) im[i].removeAttribute('loading');
+ }
+
+ function render(){
+  buildChips();
+  var list=window.ITEMS.filter(function(x){
+   if(fApp!=='all' && x.a!==fApp) return false;
+   if(fTh && x.th!==fTh) return false;
+   return true;
+  });
+  var cnt=document.getElementById('cnt');
+  if(cnt) cnt.innerHTML=L('Ցուցադրվում է '+list.length+' / '+window.ITEMS.length,
+                          'Показано '+list.length+' / '+window.ITEMS.length);
+  if(!list.length){
+   out.innerHTML='<div class="gh"><h2>'+L('Ոչինչ չի գտնվել','Ничего не найдено')+'</h2></div>';
+   return;
+  }
+  var html='';
+  if(fApp==='all'){
+   window.APPS.forEach(function(a){
+    var g=list.filter(function(x){return x.a===a.k;});
+    if(!g.length) return;
+    html+='<div class="gh"><h2>'+L(a.hy,a.ru)+'</h2><span class="ln"></span><em>'+g.length+'</em></div>'+
+          '<div class="grid">'+g.map(card).join('')+'</div>';
+   });
+  }else{
+   html='<div class="grid">'+list.map(card).join('')+'</div>';
+  }
+  out.innerHTML=html;
+  eager();
+ }
+
+ /* --- լեզու --- */
+ function setLang(ru){
+  document.body.classList.toggle('ru',ru);
+  document.getElementById('bhy').className = ru?'':'on';
+  document.getElementById('bru').className = ru?'on':'';
+  document.documentElement.lang = ru?'ru':'hy';
+ }
+ document.getElementById('bhy').onclick=function(){setLang(false);};
+ document.getElementById('bru').onclick=function(){setLang(true);};
+ if(location.hash==='#ru') setLang(true);
+
+ render();
+})();
+</script>
+</body>
+</html>
