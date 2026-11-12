@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Լայվ Գրուպ — Bosch և KNIPEX պրոֆեսիոնալ գործիք</title>
+<meta name="description" content="Լայվ Գրուպ ՍՊԸ — Bosch և KNIPEX պրոֆեսիոնալ գործիք Երևանում։ 96 դիրք՝ լազերային չափիչներ, մարտկոցով գործիք, պերֆորատոր, ձեռքի գործիք, պարագաներ։ Շենգավիթ։">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anhyan61-bot.github.io/nor-studio/demo/layvgroup/">
+<meta property="og:title" content="Լայվ Գրուպ — Bosch և KNIPEX պրոֆեսիոնալ գործիք">
+<meta property="og:description" content="96 դիրք՝ բաժնով, ապրանքանիշով և գնի տիրույթով։ 200 դրամից մինչև 450 000։">
+<meta property="og:image" content="https://anhyan61-bot.github.io/nor-studio/demo/layvgroup/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--rail:#15181c; --rail2:#1d2127; --railln:#2b3139; --railtx:#c7cdd4;
+--bg:#f5f6f7; --card:#fff; --ink:#15181c; --ink2:#434a53; --mut:#7c838c; --line:#e2e5e9;
+--acc:#d6232b; --acc2:#a81a21;
+--sans:"Noto Sans Armenian",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+
+.ru{display:none}
+body.ru .hy{display:none}
+body.ru .ru{display:inline}
+
+.ribbon{background:var(--acc2);color:#ffe3e4;font-size:13px;line-height:1.5;padding:9px 18px;text-align:center}
+
+.app{display:flex;align-items:flex-start}
+
+/* ---------- ձախ ռելս ---------- */
+.rail{width:270px;flex:none;background:var(--rail);color:var(--railtx);
+ position:sticky;top:0;max-height:100vh;overflow-y:auto;padding:24px 20px 30px}
+.brandbox{display:flex;align-items:center;gap:11px;padding-bottom:18px;border-bottom:1px solid var(--railln)}
+.mark{width:34px;height:34px;flex:none;border-radius:6px;background:var(--acc);position:relative}
+.mark:after{content:"";position:absolute;left:9px;top:15px;width:16px;height:4px;background:#fff;border-radius:1px}
+.logo{font-size:17px;font-weight:700;letter-spacing:.06em;color:#fff;line-height:1.2}
+.logo>em{display:block;font-style:normal;font-size:10.5px;font-weight:600;letter-spacing:.22em;color:var(--acc);margin-top:3px}
+
+.grp{margin-top:22px}
+.grp>h4{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7b838d;font-weight:700;margin-bottom:10px}
+.cat{all:unset;cursor:pointer;display:flex;align-items:center;gap:8px;width:100%;
+ font-family:var(--sans);font-size:14.5px;color:var(--railtx);padding:9px 11px;border-radius:5px;line-height:1.3}
+.cat:hover{background:var(--rail2);color:#fff}
+.cat.on{background:var(--acc);color:#fff;font-weight:600}
+.cat>b{margin-left:auto;font-size:12px;font-weight:600;opacity:.6}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font-family:var(--sans);font-size:13px;color:var(--railtx);
+ border:1px solid var(--railln);border-radius:999px;padding:6px 12px;line-height:1.2}
+.chip:hover{border-color:#3d454f;color:#fff}
+.chip.on{background:#fff;border-color:#fff;color:var(--rail);font-weight:600}
+
+.railfoot{margin-top:26px;padding-top:18px;border-top:1px solid var(--railln);font-size:13px;line-height:1.6;color:#8b939c}
+.railfoot>b{display:block;color:#fff;font-size:13.5px;font-weight:600;margin-bottom:4px}
+
+/* ---------- աջ մաս ---------- */
+.main{flex:1;min-width:0}
+.top{background:var(--card);border-bottom:1px solid var(--line);padding:30px 32px 26px}
+.top h1{font-size:clamp(23px,2.8vw,34px);font-weight:700;line-height:1.16;letter-spacing:-.02em;max-width:760px}
+.top p{margin-top:12px;font-size:16px;font-weight:300;color:var(--ink2);line-height:1.55;max-width:640px}
+.stats{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.stat{border:1px solid var(--line);border-radius:5px;padding:9px 13px;font-size:13.5px;color:var(--ink2)}
+.stat>b{color:var(--ink);font-weight:700}
+.lang{position:absolute;right:30px;top:0;display:flex;gap:2px}
+.topwrap{position:relative}
+.lang button{all:unset;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.07em;
+ padding:5px 10px;border-radius:3px;color:var(--mut);border:1px solid var(--line)}
+.lang button.on{background:var(--rail);border-color:var(--rail);color:#fff}
+
+.body{padding:24px 32px 50px}
+.bar{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.bar>span.cnt{font-size:13.5px;color:var(--mut)}
+.bar>button{all:unset;cursor:pointer;font-family:var(--sans);font-size:13.5px;color:var(--acc);font-weight:600;margin-left:auto}
+
+.gh{display:flex;align-items:center;gap:12px;margin:26px 0 13px}
+.gh:first-child{margin-top:0}
+.gh>h2{font-size:14px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
+.gh>i{flex:1;height:1px;background:var(--line);display:block}
+.gh>em{font-style:normal;font-size:12.5px;color:var(--mut);font-weight:600}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(216px,1fr));gap:14px}
+.it{background:var(--card);border:1px solid var(--line);border-radius:7px;overflow:hidden;display:flex;flex-direction:column}
+.it .ph{aspect-ratio:4/3;background:#eceef0;position:relative;overflow:hidden}
+.it .ph img{width:100%;height:100%;object-fit:cover}
+.bdg{position:absolute;left:8px;top:8px;background:rgba(21,24,28,.9);color:#fff;font-size:10px;font-weight:700;
+ letter-spacing:.1em;padding:4px 7px;border-radius:3px}
+.tx{padding:13px 14px 15px;display:flex;flex-direction:column;flex:1}
+.tx>h3{font-size:14.5px;font-weight:500;line-height:1.38;flex:1}
+.pr{margin-top:12px;font-size:19px;font-weight:700;color:var(--acc);letter-spacing:-.01em}
+.pr>em{font-style:normal;font-size:12.5px;font-weight:400;color:var(--mut);margin-left:3px}
+
+.why{margin-top:36px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:28px 30px}
+.why>h2{font-size:21px;font-weight:700;letter-spacing:-.01em}
+.wcols{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:20px}
+.w{border-left:2px solid var(--acc);padding-left:14px}
+.w>b{display:block;font-size:14.5px;font-weight:700;margin-bottom:4px}
+.w>span{font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.5}
+
+.note{margin-top:26px;font-size:12.5px;color:var(--mut);line-height:1.6}
+.mfoot{display:none}
+
+@media(max-width:900px){
+ .railfoot{display:none}
+ .mfoot{display:block;margin-top:26px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:13.5px;color:var(--ink2);line-height:1.6}
+ .mfoot>b{display:block;color:var(--ink);font-weight:700;margin-bottom:4px;font-size:14px}
+ .app{flex-direction:column}
+ .rail{width:100%;position:static;max-height:none;padding:16px 16px 18px}
+ .grp{margin-top:16px}
+ .cats{display:flex;gap:7px;overflow-x:auto;padding-bottom:3px}
+ .cat{width:auto;flex:none;border:1px solid var(--railln);border-radius:999px;padding:8px 13px;white-space:nowrap}
+ .cat>b{margin-left:6px}
+ .top{padding:22px 16px 20px}
+ .lang{right:16px}
+ .body{padding:18px 16px 40px}
+ .grid{grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px}
+ .it .ph{aspect-ratio:1/1}
+ .tx{padding:10px 11px 12px}
+ .tx>h3{font-size:13px}
+ .pr{font-size:16px}
+ .why{padding:20px 18px}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+<span class="hy">Սա ցուցադրական տարբերակ է՝ պատրաստված Լայվ Գրուպի list.am-ի հայտարարությունների հիման վրա։</span>
+<span class="ru">Это демонстрационная версия, собранная по объявлениям Լայվ Գրուպ на list.am.</span>
+</div>
+
+<div class="app">
+
+<aside class="rail">
+ <div class="brandbox">
+  <div class="mark"></div>
+  <div class="logo">Լայվ Գրուպ<em>Bosch · KNIPEX</em></div>
+ </div>
+
+ <div class="grp">
+  <h4><span class="hy">Բաժիններ</span><span class="ru">Разделы</span></h4>
+  <div class="cats" id="cats"></div>
+ </div>
+
+ <div class="grp">
+  <h4><span class="hy">Ապրանքանիշ</span><span class="ru">Бренд</span></h4>
+  <div class="chips" id="brands"></div>
+ </div>
+
+ <div class="grp">
+  <h4><span class="hy">Գին</span><span class="ru">Цена</span></h4>
+  <div class="chips" id="bands"></div>
+ </div>
+
+ <div class="railfoot">
+  <b><span class="hy">Երևան, Շենգավիթ</span><span class="ru">Ереван, Шенгавит</span></b>
+  <span class="hy">Պաշտոնական ներկայացուցիչ։ Պատվերը՝ հեռախոսով կամ WhatsApp-ով։</span>
+  <span class="ru">Официальный представитель. Заказ по телефону или в WhatsApp.</span>
+ </div>
+</aside>
+
+<div class="main">
+ <div class="topwrap">
+  <div class="top">
+   <div class="lang"><button id="bhy" class="on">ՀԱՅ</button><button id="bru">РУС</button></div>
+   <h1>
+    <span class="hy">Պրոֆեսիոնալ գործիք՝ բաժնով, ապրանքանիշով և գնով գտնվող</span>
+    <span class="ru">Профессиональный инструмент — с поиском по разделу, бренду и цене</span>
+   </h1>
+   <p>
+    <span class="hy">Լազերային չափիչներ, մարտկոցով գործիք, պերֆորատոր, ձեռքի գործիք և պարագաներ։ Ընտրեք ձախից՝ ցանկը կկրճատվի մինչև Ձեզ պետքը։</span>
+    <span class="ru">Лазерные измерители, аккумуляторный инструмент, перфораторы, ручной инструмент и расходники. Выберите слева — список сократится до нужного.</span>
+   </p>
+   <div class="stats">
+    <div class="stat"><b>96</b> <span class="hy">դիրք</span><span class="ru">позиций</span></div>
+    <div class="stat"><b>6</b> <span class="hy">բաժին</span><span class="ru">разделов</span></div>
+    <div class="stat"><span class="hy">Գինը՝ </span><span class="ru">Цена: </span><b>200 – 450 000</b> <span class="hy">դրամ</span><span class="ru">драм</span></div>
+    <div class="stat">Bosch <span class="hy">և</span><span class="ru">и</span> KNIPEX</div>
+   </div>
+  </div>
+ </div>
+
+ <div class="body">
+  <div class="bar">
+   <span class="cnt" id="cnt"></span>
+   <button id="reset"><span class="hy">Մաքրել ընտրությունը</span><span class="ru">Сбросить фильтры</span></button>
+  </div>
+  <div id="out"></div>
+
+  <section class="why">
+   <h2><span class="hy">Ինչու է ցանկը բաժանված</span><span class="ru">Почему список разделён</span></h2>
+   <div class="wcols">
+    <div class="w"><b><span class="hy">200-ից 450 000</span><span class="ru">От 200 до 450 000</span></b>
+     <span><span class="hy">Հղկաթղթի և պերֆորատորի գնորդը նույն մարդը չէ։ Գնի տիրույթը ձախից առանձնացնում է նրանց։</span><span class="ru">Покупатель наждачки и покупатель перфоратора — разные люди. Фильтр по цене разделяет их.</span></span></div>
+    <div class="w"><b><span class="hy">Երկու ապրանքանիշ</span><span class="ru">Два бренда</span></b>
+     <span><span class="hy">Bosch-ի էլեկտրագործիք և KNIPEX-ի ձեռքի գործիք։ Ով մեկն է փնտրում, մյուսը չի տեսնում։</span><span class="ru">Электроинструмент Bosch и ручной инструмент KNIPEX. Кто ищет одно, не видит другое.</span></span></div>
+    <div class="w"><b><span class="hy">Մոդելը՝ անունի մեջ</span><span class="ru">Модель в названии</span></b>
+     <span><span class="hy">GBH 5-40 DCE, GLM 50-27 C, 87 01 250 — վարպետը փնտրում է հենց մոդելով։</span><span class="ru">GBH 5-40 DCE, GLM 50-27 C, 87 01 250 — мастер ищет именно по модели.</span></span></div>
+   </div>
+  </section>
+
+  <div class="mfoot">
+   <b><span class="hy">Երևան, Շենգավիթ</span><span class="ru">Ереван, Шенгавит</span></b>
+   <span class="hy">Պաշտոնական ներկայացուցիչ։ Պատվերը՝ հեռախոսով կամ WhatsApp-ով։</span>
+   <span class="ru">Официальный представитель. Заказ по телефону или в WhatsApp.</span>
+  </div>
+
+  <div class="note">
+   <span class="hy">Ցուցադրական էջ։ Անվանումները, գները և լուսանկարները վերցված են list.am-ի հայտարարություններից և կճշտվեն։ Bosch-ը և KNIPEX-ը իրենց սեփականատերերի ապրանքանիշերն են։</span>
+   <span class="ru">Демонстрационная страница. Названия, цены и фотографии взяты из объявлений на list.am и будут уточнены. Bosch и KNIPEX — товарные знаки их владельцев.</span>
+  </div>
+ </div>
+</div>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+(function(){
+ var fG='all', fB='all', fP='all';
+ var out=document.getElementById('out');
+
+ function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+ function L(hy,ru){return '<span class="hy">'+hy+'</span><span class="ru">'+ru+'</span>';}
+ function brandOf(x){return /KNIPEX/i.test(x.ru+' '+x.hy)?'KNIPEX':'Bosch';}
+
+ var BRANDS=[{k:'Bosch',n:'Bosch'},{k:'KNIPEX',n:'KNIPEX'}];
+
+ function mk(tag,cls,html,fn){
+  var e=document.createElement(tag); e.className=cls; e.innerHTML=html;
+  if(fn) e.onclick=fn; return e;
+ }
+
+ function buildRail(){
+  var cats=document.getElementById('cats'); cats.innerHTML='';
+  cats.appendChild(mk('button','cat'+(fG==='all'?' on':''),
+   L('Բոլորը','Все')+'<b>'+window.ITEMS.length+'</b>',function(){fG='all';render();}));
+  window.GROUPS.forEach(function(g){
+   var n=window.ITEMS.filter(function(x){return x.g===g.k;}).length;
+   cats.appendChild(mk('button','cat'+(fG===g.k?' on':''),
+    L(g.hy,g.ru)+'<b>'+n+'</b>',function(){fG=g.k;render();}));
+  });
+
+  var br=document.getElementById('brands'); br.innerHTML='';
+  br.appendChild(mk('button','chip'+(fB==='all'?' on':''),L('Բոլորը','Все'),function(){fB='all';render();}));
+  BRANDS.forEach(function(b){
+   br.appendChild(mk('button','chip'+(fB===b.k?' on':''),b.n,function(){fB=b.k;render();}));
+  });
+
+  var bd=document.getElementById('bands'); bd.innerHTML='';
+  bd.appendChild(mk('button','chip'+(fP==='all'?' on':''),L('Բոլորը','Все'),function(){fP='all';render();}));
+  window.BANDS.forEach(function(b){
+   bd.appendChild(mk('button','chip'+(fP===b.k?' on':''),L(b.hy,b.ru),function(){fP=b.k;render();}));
+  });
+ }
+
+ function card(x){
+  var b=brandOf(x);
+  return '<article class="it"><div class="ph"><div class="bdg">'+b+'</div>'+
+   '<img src="img/'+x.i+'.webp" alt="" loading="lazy"></div>'+
+   '<div class="tx"><h3>'+L(x.hy,x.ru)+'</h3>'+
+   '<div class="pr">'+fmt(x.p)+' <em>'+L('դրամ','драм')+'</em></div></div></article>';
+ }
+
+ function eager(){
+  var im=document.querySelectorAll('#out .it img');
+  for(var i=0;i<im.length && i<8;i++) im[i].removeAttribute('loading');
+ }
+
+ function render(){
+  buildRail();
+  var band=null;
+  if(fP!=='all') for(var q=0;q<window.BANDS.length;q++) if(window.BANDS[q].k===fP) band=window.BANDS[q];
+  var list=window.ITEMS.filter(function(x){
+   if(fG!=='all' && x.g!==fG) return false;
+   if(fB!=='all' && brandOf(x)!==fB) return false;
+   if(band && (x.p<band.min || x.p>band.max)) return false;
+   return true;
+  });
+
+  document.getElementById('cnt').innerHTML=
+   L('Ցուցադրվում է '+list.length+' / '+window.ITEMS.length,
+     'Показано '+list.length+' / '+window.ITEMS.length);
+
+  if(!list.length){
+   out.innerHTML='<div class="gh"><h2>'+L('Ոչինչ չի գտնվել','Ничего не найдено')+'</h2></div>';
+   return;
+  }
+
+  var html='';
+  if(fG==='all'){
+   window.GROUPS.forEach(function(g){
+    var sub=list.filter(function(x){return x.g===g.k;});
+    if(!sub.length) return;
+    html+='<div class="gh"><h2>'+L(g.hy,g.ru)+'</h2><i></i><em>'+sub.length+'</em></div>'+
+          '<div class="grid">'+sub.map(card).join('')+'</div>';
+   });
+  }else{
+   html='<div class="grid">'+list.map(card).join('')+'</div>';
+  }
+  out.innerHTML=html;
+  eager();
+ }
+
+ document.getElementById('reset').onclick=function(){fG='all';fB='all';fP='all';render();};
+
+ function setLang(ru){
+  document.body.classList.toggle('ru',ru);
+  document.getElementById('bhy').className = ru?'':'on';
+  document.getElementById('bru').className = ru?'on':'';
+  document.documentElement.lang = ru?'ru':'hy';
+ }
+ document.getElementById('bhy').onclick=function(){setLang(false);};
+ document.getElementById('bru').onclick=function(){setLang(true);};
+ if(location.hash==='#ru') setLang(true);
+
+ render();
+})();
+</script>
+</body>
+</html>
